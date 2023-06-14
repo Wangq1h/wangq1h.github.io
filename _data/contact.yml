@@ -17,11 +17,11 @@
 
 - type: zhihu
   icon: "fab fa-zhihu"
-  url: "https://www.zhihu.com/people/wang-qi-heng-26"
+  username: "wang-qi-heng-26"
 
 - type: wechat
-  icon: "fab fa-wechat"
-  noblank: true
+  icon: "fa fa-wechat"
+
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
