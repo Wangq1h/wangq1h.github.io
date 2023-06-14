@@ -71,6 +71,10 @@
           {%- endcapture -%}
         {% when 'rss' %}
           {% assign url = '/feed.xml' | relative_url %}
+        {% when 'zhihu' %}
+          {% assign url = 'https://www.zhihu.com/people/' | append: site.zhihu.username %}
+        {% when 'weibo' %}
+          {% assign url = 'https://weibo.com/' | append: site.weibo.username %}
         {% else %}
           {% assign url = entry.url %}
       {% endcase %}
