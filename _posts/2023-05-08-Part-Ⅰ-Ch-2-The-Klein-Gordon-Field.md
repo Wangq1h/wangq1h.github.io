@@ -1,6 +1,6 @@
 ---
 title: The Klein-Gordon Field
-author: Wangq1h
+author: wangq1h
 date: 2023-05-08 12:00:00+0800
 categories: [Quantan Field Theory, Peskin's Book]
 Tags: [Peskin, Klein-Gordon Field]
