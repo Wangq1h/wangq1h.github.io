@@ -49,7 +49,6 @@
 
   {% if site.resources.ignore_env != jekyll.environment and site.resources.self_hosted %}
     <link href="{{ site.data.origin[type].webfonts | relative_url }}" rel="stylesheet">
-
   {% else %}
     {% for cdn in site.data.origin[type].cdns %}
       <link rel="preconnect" href="{{ cdn.url }}" {{ cdn.args }}>
@@ -69,7 +68,10 @@
   {% endif %}
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].bootstrap.css | relative_url}}">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}">

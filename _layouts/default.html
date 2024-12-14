@@ -7,6 +7,8 @@ layout: compress
 
 {% include origin-type.html %}
 
+{% include announcement.html %}
+
 {% include lang.html %}
 
 {% capture prefer_mode %}
@@ -66,7 +68,7 @@ layout: compress
     {% endif %}
 
     {% include js-selector.html %}
-
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     {% if page.mermaid %}
       {% include mermaid.html %}
     {% endif %}
