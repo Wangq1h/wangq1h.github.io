@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 画廊
+title: Gallery
 icon: fas fa-images
 order: 5
 ---
