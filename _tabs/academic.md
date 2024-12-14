@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 学术文章
+title: publication
 icon: fas fa-book
 order: 6
 ---

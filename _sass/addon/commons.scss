@@ -1601,3 +1601,19 @@ $btn-mb: 0.5rem;
   background: #f8f8f8;
   margin: 0;
 }
+.academic-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.academic-article-item {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.academic-article-item h2 {
+  margin-top: 0;
+}
