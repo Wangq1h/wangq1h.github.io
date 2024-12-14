@@ -7,8 +7,6 @@ layout: compress
 
 {% include origin-type.html %}
 
-{% include announcement.html %}
-
 {% include lang.html %}
 
 {% capture prefer_mode %}
@@ -22,6 +20,7 @@ layout: compress
   {% include head.html %}
 
   <body>
+    {% include announcement.html lang=lang%}
     {% include sidebar.html lang=lang %}
 
     <div id="main-wrapper" class="d-flex justify-content-center">
