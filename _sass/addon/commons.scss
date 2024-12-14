@@ -1578,13 +1578,12 @@ $btn-mb: 0.5rem;
   }
 } /* min-width: 1650px */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
 }
 
 .gallery-item {
-  flex: 1 1 calc(33.333% - 1rem);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -1594,6 +1593,7 @@ $btn-mb: 0.5rem;
 .gallery-item img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .gallery-item p {
