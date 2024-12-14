@@ -1,0 +1,6 @@
+- url: /assets/images/gallery/image1.jpg
+  alt: 图片1
+  caption: 图片1的描述
+- url: /assets/images/gallery/image2.jpg
+  alt: 图片2
+  caption: 图片2的描述
