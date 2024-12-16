@@ -76,7 +76,7 @@ theme_mode:  #dark
 #
 # e.g. 'https://cdn.com'
 # img_cdn: "https://wangq1h.github.io"
-img_cdn: 
+img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "/assets/avatar.png"
