@@ -10,9 +10,13 @@ platforms:
     icon: "fab fa-facebook-square"
     link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
 
-  - type: Telegram
-    icon: "fab fa-telegram"
-    link: "https://t.me/share/url?url=URL&text=TITLE"
+  - type: WeChat
+    icon: "fab fa-weixin"
+    link: "weixin://dl/moments?text=TITLE%20URL"
+
+  - type: QQ
+    icon: "fab fa-qq"
+    link: "https://connect.qq.com/widget/shareqq/index.html?url=URL&title=TITLE"
 
   # Uncomment below if you need to.
   #
