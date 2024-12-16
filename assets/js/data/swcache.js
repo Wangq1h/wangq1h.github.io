@@ -45,6 +45,7 @@ const allowedDomains = [
     'cdn.jsdelivr.net',
     'polyfill.io'
     'websitecomment-k4dp9jlgs-wangq1hs-projects.vercel.app',
+    'websitecomment-sage.vercel.app'
 ];
 
 /* Requests that include the following path will be banned */
