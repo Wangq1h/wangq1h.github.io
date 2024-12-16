@@ -9,4 +9,4 @@ math: true
 mermaid: true
 ---
 # Quantum Hall Effect
-<embed src="./量子霍尔效应.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="/assets/img/posts/凝聚态物理本科/量子霍尔效应.pdf" type="application/pdf" width="100%" height="600px" />
