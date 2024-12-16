@@ -32,6 +32,9 @@
   or page.layout == 'tag'
 %}
   {% assign locale = site.lang | split: '-' | first %}
+  {% if locale == 'cn' %}
+  {% assign locale = 'zh-cn' %}
+  {% endif %}
 
   {% assign urls = urls
     | append: ','
