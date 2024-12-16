@@ -1,20 +1,22 @@
 import os
 from PIL import Image
 
-def compress_image(file_path, quality=85):
-    """Compress the image and overwrite the original file."""
+def convert_to_webp(file_path, quality=85):
+    """Convert the image to WebP format and overwrite the original file."""
     with Image.open(file_path) as img:
-        img.save(file_path, optimize=True, quality=quality)
+        new_file_path = file_path.rsplit('.', 1)[0] + '.webp'
+        img.save(new_file_path, 'webp', optimize=True, quality=quality)
+        os.remove(file_path)
+        print(f'Converted: {file_path} to {new_file_path}')
 
-def compress_images_in_directory(directory, quality=85):
-    """Compress all .png images in the given directory."""
+def convert_images_in_directory(directory, quality=85):
+    """Convert all images in the given directory to WebP format."""
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.lower().endswith('.png'):
+            if file.lower().endswith(('.png', '.jpg', '.jpeg')):
                 file_path = os.path.join(root, file)
-                compress_image(file_path, quality)
-                print(f'Compressed: {file_path}')
+                convert_to_webp(file_path, quality)
 
 if __name__ == "__main__":
     directory = '.'  # 替换为你的工作目录路径
-    compress_images_in_directory(directory)
+    convert_images_in_directory(directory)
