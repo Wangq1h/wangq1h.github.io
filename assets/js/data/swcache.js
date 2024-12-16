@@ -44,6 +44,7 @@ const allowedDomains = [
     'fonts.googleapis.com',
     'cdn.jsdelivr.net',
     'polyfill.io'
+    'websitecomment-k4dp9jlgs-wangq1hs-projects.vercel.app',
 ];
 
 /* Requests that include the following path will be banned */
