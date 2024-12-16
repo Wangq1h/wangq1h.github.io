@@ -33,7 +33,7 @@
 %}
   {% assign locale = site.lang | split: '-' | first %}
   {% if locale == 'cn' %}
-  {% assign locale = 'zh-cn' %}
+    {% assign locale = 'zh-cn' %}
   {% endif %}
 
   {% assign urls = urls
