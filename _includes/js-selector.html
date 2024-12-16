@@ -57,11 +57,8 @@
   {% assign urls = urls | append: ',' | append: site.data.origin[type].mermaid.js %}
 {% endif %}
 
-<!-- 分离 URL 进行调试 -->
-{% assign urls_array = urls | split: ',' %}
-{% for url in urls_array %}
-  <script src="{{ url }}"></script>
-{% endfor %}
+<!-- 合并 URL -->
+{% include jsdelivr-combine.html urls=urls %}
 
 {% if jekyll.environment == 'production' %}
   <!-- PWA -->
