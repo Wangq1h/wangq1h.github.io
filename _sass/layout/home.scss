@@ -260,6 +260,7 @@
     .related-website-item {
       flex: 1 1 calc(20% - 1rem);
       text-align: center;
+      padding: 1rem; /* 添加内边距，确保图片和文字之间有足够的间距 */
 
       img {
         width: 100px;
