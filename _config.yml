@@ -123,29 +123,31 @@ paginate: 10
 #   - title: "Jekyll"
 #     url: "https://jekyllrb.com/"
 related_websites: # the related website section in the footer
-  - name: Ruocheng Wang
-    url: https://wang-ruocheng.github.io/
-    image: /assets/img/related_websites/wrc_ox.jpg
+  friend_classmates:
+    - name: Ruocheng Wang
+      url: https://wang-ruocheng.github.io/
+      image: /assets/img/related_websites/wrc_ox.jpg
 
-  - name: Yiming Hu
-    url: https://cant1de.github.io/
-    image: /assets/img/related_websites/icon-hym.jpg
+    - name: Yiming Hu
+      url: https://cant1de.github.io/
+      image: /assets/img/related_websites/icon-hym.jpg
 
-  - name: Lihao Guo
-    url: https://chiclats.github.io/
-    image: /assets/img/related_websites/glh.jpg
+    - name: Lihao Guo
+      url: https://chiclats.github.io/
+      image: /assets/img/related_websites/glh.jpg
+  
+  professors_instructors:
+    - name: Prof. Hong Ding
+      url: https://web.tdli.sjtu.edu.cn/dingh/members/%E4%B8%81%E6%B4%AA/
+      image: /assets/img/related_websites/dingh.jpg
 
-  - name: Academician Hong Ding
-    url: https://web.tdli.sjtu.edu.cn/dingh/members/%E4%B8%81%E6%B4%AA/
-    image: /assets/img/related_websites/dingh.jpg
+    - name: Prof. Shao-feng Ge
+      url: https://tdli.sjtu.edu.cn/EN/people/t-d-lee-fellows/53/Shao-FengGe
+      image: /assets/img/related_websites/gsf.jpg
 
-  - name: Prof. Shao-feng Ge
-    url: https://tdli.sjtu.edu.cn/EN/people/t-d-lee-fellows/53/Shao-FengGe
-    image: /assets/img/related_websites/gsf.jpg
-
-  - name: Prof. Xuefeng Ding
-    url: https://dingxf.cn/
-    image: /assets/img/related_websites/dignxf.jpeg
+    - name: Prof. Xuefeng Ding
+      url: https://dingxf.cn/
+      image: /assets/img/related_websites/dignxf.jpg
 
 # ------------ The following options are not recommended to be modified ------------------
 

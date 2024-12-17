@@ -133,9 +133,23 @@ refactor: true
 
 <!-- Related Websites Section -->
 <div class="related-websites-section mt-5">
-  <h2>相关网站</h2>
+  <h2>Friends & Classmates</h2>
   <div class="related-websites d-flex flex-wrap">
-    {% for site in site.related_websites %}
+    {% for site in site.related_websites.friends_classmates %}
+      <div class="related-website-item text-center m-3">
+        <a href="{{ site.url }}" target="_blank">
+          <img src="{{ site.image }}" class="rounded-circle" alt="{{ site.name }}" width="100" height="100">
+          <p>{{ site.name }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="related-websites-section mt-5">
+  <h2>Professors & Instructors</h2>
+  <div class="related-websites d-flex flex-wrap">
+    {% for site in site.related_websites.professors_instructors %}
       <div class="related-website-item text-center m-3">
         <a href="{{ site.url }}" target="_blank">
           <img src="{{ site.image }}" class="rounded-circle" alt="{{ site.name }}" width="100" height="100">
