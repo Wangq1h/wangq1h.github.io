@@ -117,3 +117,31 @@ refactor: true
 {% if has_paginator %}
   {% include post-paginator.html %}
 {% endif %}
+
+<!-- Gallery Section -->
+<div class="gallery-section mt-5">
+  <h2>画廊</h2>
+  <div class="gallery">
+    {% for image in site.data.gallery %}
+      <div class="gallery-item">
+        <img src="{{ image.url }}" alt="{{ image.alt }}">
+        <p>{{ image.caption }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Related Websites Section -->
+<div class="related-websites-section mt-5">
+  <h2>相关网站</h2>
+  <div class="related-websites d-flex flex-wrap">
+    {% for site in site.data.related_websites %}
+      <div class="related-website-item text-center m-3">
+        <a href="{{ site.url }}" target="_blank">
+          <img src="{{ site.image }}" class="rounded-circle" alt="{{ site.name }}" width="100" height="100">
+          <p>{{ site.name }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
