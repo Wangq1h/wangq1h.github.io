@@ -5,7 +5,7 @@ date: 2023-05-08 12:00:00+0800
 categories: [Quantan Field Theory, Peskin's Book]
 Tags: [Peskin, Klein-Gordon Field]
 math: true
-pin: true
+pin: false
 ---
 
 # Part Ⅰ Ch 2 The Klein-Gordon Field
