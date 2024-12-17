@@ -117,7 +117,7 @@ $$
 $$
 \begin{align}
 \rho(g)(e_1,\cdots,e_n)=(e_1,\cdots,e_n)=(e_1,\cdots,e_n)R_g\\
-|R_g|\neq 0,R_{g_1g_2}=R_{g_1}R_{g_2}
+\mid R_g\mid \neq 0,R_{g_1g_2}=R_{g_1}R_{g_2}
 \end{align}
 $$
 
