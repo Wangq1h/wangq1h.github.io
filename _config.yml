@@ -123,7 +123,7 @@ paginate: 10
 #   - title: "Jekyll"
 #     url: "https://jekyllrb.com/"
 related_websites: # the related website section in the footer
-  friend_classmates:
+  friends_classmates:
     - name: Ruocheng Wang
       url: https://wang-ruocheng.github.io/
       image: /assets/img/related_websites/wrc_ox.jpg
