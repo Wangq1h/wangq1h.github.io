@@ -43,7 +43,7 @@ const allowedDomains = [
     'fonts.gstatic.com',
     'fonts.googleapis.com',
     'cdn.jsdelivr.net',
-    'polyfill.io'
+    'polyfill.io',
     'websitecomment-k4dp9jlgs-wangq1hs-projects.vercel.app',
     'websitecomment-sage.vercel.app'
 ];
