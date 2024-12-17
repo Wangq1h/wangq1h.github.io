@@ -11,11 +11,11 @@ mermaid: true
 # The representations of groups and algebra
 群的定义：
 群是一种代数结构，其定义为：
-> 群$\bm G$是一个具有四个要素$(G,\cdot,\bm I, \bm e)$的代数结构:
+> 群$\mathbf G$是一个具有四个要素$(G,\cdot,\mathbf I, \mathbf e)$的代数结构:
 > * $G$是一个集合。
 > * $\cdot$是$G\times G$上的一个二元运算，称为群乘法。其满足$G\times G\rightarrow G$，即对于任意的$a,b\in G$，有$a\cdot b\in G$。
-> * $\bm I$是$G$上的一个一元运算，称为群逆运算。其满足$G\rightarrow G$，即对于任意的$a\in G$，有$\bm I(a)\in G$。
-> * $\bm e$是$G$上的一个元素，称为群单位元。其满足$\bm e\in G$。
+> * $\mathbf I$是$G$上的一个一元运算，称为群逆运算。其满足$G\rightarrow G$，即对于任意的$a\in G$，有$\mathbf I(a)\in G$。
+> * $\mathbf e$是$G$上的一个元素，称为群单位元。其满足$\mathbf e\in G$。
 > 群乘法需要满足结合代数：
 > 
 $$
@@ -28,18 +28,18 @@ $$
 > 
 $$
 \begin{align}
-\forall a\in G, a\cdot\bm e=\bm e\cdot a=a
+\forall a\in G, a\cdot\mathbf e=\mathbf e\cdot a=a
 \end{align}
 $$
 
 > 
 $$
 \begin{align}
-\forall a\in G, a\cdot\bm I(a)=\bm I(a)\cdot a=\bm e
+\forall a\in G, a\cdot\mathbf I(a)=\mathbf I(a)\cdot a=\mathbf e
 \end{align}
 $$
 
-> 一般我们也把逆元简记为$a^{-1}$。同时简记单位元为$\bm 1$。
+> 一般我们也把逆元简记为$a^{-1}$。同时简记单位元为$\mathbf 1$。
 
 代数作为一种数学结构是环+模，而模moudule其实就是表示representation。
 
@@ -69,7 +69,7 @@ $$
 
 $$
 \begin{align}
-\rho(g)\triangleq\bm 1,\forall g\in G
+\rho(g)\triangleq\mathbf 1,\forall g\in G
 \end{align}
 $$
 
