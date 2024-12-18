@@ -150,6 +150,8 @@ Proof:
 >
 > $$
 > \forall n_l,n_m\in N,g_i,g_j\in G,(n_lg_i)(n_mg_j)=n_l(g_in_mg_i^{-1})g_ig_j\\
+> $$
+> $$
 > \because g_iNg_i^{-1}=N,\therefore n_l(g_in_mg_i^{-1})g_ig_j=n_ln_mg_ig_j=n_kg_\sigma\in Ng_\sigma
 > $$
 >
@@ -445,7 +447,7 @@ Because $\forall g\in G, gag^{-1}\in C_i$, thus $\forall g\in G,[g,\mathbb C_i]=
 > Because $[g,\mathbb C_i\mathbb C_j]=0$, thus $\mathbb C_i\mathbb C_j=\sum_kC_{ij}^k\mathbb C_k $. Additionally,
 >
 > * $C_{ij}^k=C_{ji}^k$.
-> * Set $\mathbb C_1=\{e\}$, $C_{ij}^{1}=\begin{cases}r_{i}&(C_{j}=C_{i^{\prime}})\\0&(C_{j}\neq C_{i^{\prime}}).\end{cases}$ where $C_i'=Inverse(C_i)$
+> * Set $\mathbb C_1=\{e\}$, $C_{ij}^{1}=\begin{cases}r_{i}&(C_{j}=C_{i^{\prime}})\\ 0&(C_{j}\neq C_{i^{\prime}}).\end{cases}$ where $C_i'=Inverse(C_i)$
 
 It's time to prove the orthonomality of irreducible characters:
 
@@ -519,7 +521,7 @@ $a$ is the number of modes and $\alpha$ is the normal coordinates index. $\sum_{
 * Rotation: for each atom, $\chi(C(\phi))=1+2\cos\phi$. Because only diagonal components contribute to the character, so we should only focus on these components. In other words, we chould find the invariant atoms as they are the rotation axises. Labeld as $N_c$, the whole character is $\chi=N_c(1+2\cos\phi)$.
 * Reflection: label the number of atoms on the reflection plane is $N_\sigma$, then $\chi(\sigma)=N_\sigma$
 * Space inversion: label the number of atoms at the origin $N_I\in\{0,1\}$, $\chi(I)=-3N_I$
-* Rotary reflection: the difference between the rotation and rotary reflection is: $D(S(\phi))=\begin{pmatrix}\cos\phi&\sin\phi&0\\-\sin\phi&\cos\phi&0\\0&0&-1\end{pmatrix}\quad D(C(\phi))=\begin{pmatrix}\cos\phi&\sin\phi&0\\-\sin\phi&\cos\phi&0\\0&0&1\end{pmatrix}$. So $\chi(S(\phi))=N_s(2\cos\phi-1)$. $N_s$ is the number of atoms at the origin.
+* Rotary reflection: the difference between the rotation and rotary reflection is: $D(S(\phi))=\begin{pmatrix}\cos\phi&\sin\phi&0\\ -\sin\phi&\cos\phi&0\\ 0&0&-1\end{pmatrix}\quad D(C(\phi))=\begin{pmatrix}\cos\phi&\sin\phi&0\\ -\sin\phi&\cos\phi&0\\ 0&0&1\end{pmatrix}$. So $\chi(S(\phi))=N_s(2\cos\phi-1)$. $N_s$ is the number of atoms at the origin.
 
 ## Quantum Mechanics and Group Theory
 
@@ -531,7 +533,7 @@ $$
 \hat A\psi_a=\sum_{b=1}^dD_{ba}(A)\psi_b
 $$
 
-In fact $D_{ba}(A)=\langle\psi_b|\hat A|\psi_a\rangle$.
+In fact $D_{ba}(A)=\bra{\psi_b}\hat A\ket{\psi_a}$.
 
 ### 2D infinite potential well
 
@@ -587,6 +589,7 @@ $\mathrm{SO}(3)$ is a **compact but not simply connected** group.
 
 #### Structure of SO(3)
 Any 3d rotation can be decomposed into 3 rotations around 3 different axis. This is called Euler's theorem. The rotation can be written as:
+
 $$
 \begin{align}
   R_{\alpha}(\mathbf e_1)=\begin{pmatrix}1&0&0\\0&\cos\alpha&-\sin\alpha\\0&\sin\alpha&\cos\alpha\end{pmatrix}\\
@@ -594,14 +597,18 @@ R_{\beta}(\mathbf e_2)=\begin{pmatrix}\cos\beta&0&\sin\beta\\0&1&0\\-\sin\beta&0
 R_{\gamma}(\mathbf e_3)=\begin{pmatrix}\cos\gamma&-\sin\gamma&0\\\sin\gamma&\cos\gamma&0\\0&0&1\end{pmatrix}
 \end{align}
 $$
+
 When rotating at an infinitesimal angle, the rotation matrix can be written as:
+
 $$
 \begin{align}
   R_{\alpha}(\mathbf e_1)=\exp[-i\alpha J_1]\approx 1-i\alpha J_1\\
   \therefore J_1=\begin{pmatrix}0&0&0\\0&0&-i\\0&i&0\end{pmatrix}
 \end{align}
 $$
+
 Doing the same for $J_2,J_3$, we can get:
+
 $$
 \begin{align}
   J_1=\begin{pmatrix}0&0&0\\0&0&-i\\0&i&0\end{pmatrix}\\
@@ -609,34 +616,48 @@ $$
   J_3=\begin{pmatrix}0&-i&0\\i&0&0\\0&0&0\end{pmatrix}
 \end{align}
 $$
+
 These are the generators of SO(3). The commutation relation is:
+
 $$
 [J_i,J_j]=i\varepsilon_{ijk}J_k
 $$
+
 The general rep. of SO(3) is:
+
 $$
 D(\mathbf n,\theta)=D[R_\alpha(\mathbf e_3)R_\beta(\mathbf e_2)R_\gamma(\mathbf e_3)]=D(\mathbf e_3,\alpha)D(\mathbf e_2,\beta)D(\mathbf e_3,\gamma)
 $$
+
 From the commutation relationship we can get many properties of the rotation group. For more details, see the my notes on [my homepage](https://wangq1h.github.io/posts/%E6%9D%8E%E7%BE%A4%E5%92%8C%E6%9D%8E%E4%BB%A3%E6%95%B0/).
 
 To find the rep. of the Lie algebra, we can use the basis $|j,m\rangle$ which is the eigenstate of $J^2$ and $J_3$. Introducing the 
 raising and lowering operators:
+
 $$
 J_{\pm}=J_1\pm iJ_2
 $$
+
 The commutation relation is:
+
 $$
 [J_3,J_{\pm}]=\pm J_{\pm},[J_{+},J_{-}]=2J_3
 $$
+
 Assuming the action of $J_{\pm}$ on $|m\rangle$ is:
+
 $$
 J_{\pm}|m\rangle=N_m^{(\pm)}|j,m\pm1\rangle
 $$
+
 Then we can get:
+
 $$
 \bra{m}J_+\ket{m-1}=\bra{m-1}J_-\ket m^*\Rightarrow N_m^{(-)*}=N_{m-1}^{(+)}
 $$
+
 Choosing $N_m^{(-)}=N_m$, $N_{m-1}^{(+)}=N_{m}^*$.
+
 $$
 \begin{align}
   \because \bra{j-k}J_+J_-\ket{j-k}&=|N_{j-k}|^2\\
@@ -645,16 +666,22 @@ $$
   \therefore |N_{j-k}|^2-|N_{j-k+1}|^2&=2(j-k)
 \end{align}
 $$
+
 From the constraint $m\le j$, $N_{j+1}=0$. Summing up the equation from $m$ to $j+1$, we can get:
+
 $$
 |N_{m-1}|^2=\sum_{k=0}^{j-m+1}2(j-k)=(j-m+2)(j+m-1)
 $$
+
 which gives:
+
 $$
 |N_m|=\sqrt{(j+m)(j-m+1)}
 $$
+
 Because we expect the basis is finite. A lower bound of $m$ is $j-l$, which means $N_{j-l}=0$. This gives $j=\frac l 2$. The dimension of the rep. is $2j+1=l+1$.
 Each $j$ specifies an ireps. The matrix element of $j$ reps is:
+
 $$
 \begin{align}
   (J_+)_{m+1,m}&=\sqrt{(j-m)(j+m+1)}\\
@@ -662,18 +689,24 @@ $$
   (J_3)_{m,m}&=m
 \end{align}
 $$
+
 Others are zero. The matrix of $J_1,J_2$ can be obtained by $J_{\pm}$ and $J_3$. When $j=\frac 1 2$, the matrix is:
+
 $$
 J_1 = \left[\begin{matrix}0 & \frac 1 2\\\frac 1 2 & 0\end{matrix}\right]
 J_2 = \left[\begin{matrix}0 & - \frac 1 2 i\\\frac 1 2 i & 0\end{matrix}\right]
 J_3 = \left[\begin{matrix}\frac 1 2 & 0\\0 & -\frac 1 2\end{matrix}\right]
+
 $$
+
 when $j=1$, the matrix is:
+
 $$
 J_1 = \left[\begin{matrix}0 & \frac{\sqrt{2}}2 & 0\\\frac{\sqrt{2}}2 & 0 & \frac{\sqrt{2}}2\\0 & \frac{\sqrt{2}}2 & 0\end{matrix}\right]
 J_2 = \left[\begin{matrix}0 & - \frac{\sqrt{2}}2 i & 0\\\frac{\sqrt{2}}2 i & 0 & - \frac{\sqrt{2}}2 i\\0 & \frac{\sqrt{2}}2 i & 0\end{matrix}\right]
 J_3 = \left[\begin{matrix}1 & 0 & 0\\0 & 0 & 0\\0 & 0 & -1\end{matrix}\right]
 $$
+
 It is easy to see that the matrix is unitary equaivelent to the matrix discussed in the beginning of the structure of SO(3), which means they are all irreps. of the Lie algebra we talked here, which is $\mathfrak{so}(3)$ or $\mathfrak{su}(2)$ [^1]. More specifically, the algebra is $\mathfrak{so}(3)$ as the dimension of the rep. is three.
 
 >Because $x,y,z$ and $\ket{1,0},\ket{1,1},\ket{1,-1}$ are all complete basis of a 3d space. They are unitary equivalent. However, this is a mathematical property without physical meanings. We are not saying that the 3d rotation always has an eigenvalue of $j=1$.
@@ -685,11 +718,13 @@ It is easy to see that the matrix is unitary equaivelent to the matrix discussed
 [^1]: This conclusion comes from [wiki](https://en.wikipedia.org/wiki/Angular_momentum_operator).
 
 when $j=2$, the matrix is:
+
 $$
 J_1 = \left[\begin{matrix}0 & 1 & 0 & 0 & 0\\1 & 0 & \frac{\sqrt{6}}2 & 0 & 0\\0 & \frac{\sqrt{6}}2 & 0 & \frac{\sqrt{6}}2 & 0\\0 & 0 & \frac{\sqrt{6}}2 & 0 & 1\\0 & 0 & 0 & 1 & 0\end{matrix}\right]
 J_2 = \left[\begin{matrix}0 & - 1 i & 0 & 0 & 0\\1 i & 0 & - \frac{\sqrt{6}}2 i & 0 & 0\\0 & \frac{\sqrt{6}}2 i & 0 & - \frac{\sqrt{6}}2 i & 0\\0 & 0 & \frac{\sqrt{6}}2 i & 0 & - 1 i\\0 & 0 & 0 & 1 i & 0\end{matrix}\right]
 J_3 = \left[\begin{matrix}2.0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & -1 & 0\\0 & 0 & 0 & 0 & -2.0\end{matrix}\right]
 $$
+
 Here I gave a python script which can generate the matrix of $J_1,J_2,J_3$ for any $j$.
 ```python
 import numpy as np
@@ -746,22 +781,25 @@ print(matrix_to_latex(J_3, "J_3"))
 ```
 ### Direct product reps.
 The strategy to find the Celebsch-Gordon coefficients is:
-1. Find out the state with $J_{max}=j_1+j_2$ and $m_{max}=j_1+j_2$. This is the highest state, $|j_1+j_2,j_1+j_2\rangle=\ket{j_1,j_1}\otimes\ket{j_2,j_2}$.
+1. Find out the state with $J_{max}=j_1+j_2$ and $m_{max}=j_1+j_2$. This is the highest state, $\ket{j_1+j_2,j_1+j_2}=\ket{j_1,j_1}\otimes\ket{j_2,j_2}$.
 2. From the highest state, using lowering operators to find out all states with $J=J_{max}$ and $m_j=m_{max},m_{max}-1,\dots,-m_{max}$.
-3. Considering the $J=J_{max}-1$ states, its highest weight is $m_{max}-1$, which means the state is the linear superpostion of $|j_1,j_1-1\rangle\otimes|j_2,j_2\rangle$ and $|j_1,j_1\rangle\otimes|j_2,j_2-1\rangle$. Using the orthogonality of $\ket{j,m-1}$ and $\ket{j-1,m-1}$, we can get the coefficients.
+3. Considering the $J=J_{max}-1$ states, its highest weight is $m_{max}-1$, which means the state is the linear superpostion of $\ket{j_1,j_1-1}\otimes\ket{j_2,j_2}$ and $\ket{j_1,j_1}\otimes\ket{j_2,j_2-1}$. Using the orthogonality of $\ket{j,m-1}$ and $\ket{j-1,m-1}$, we can get the coefficients.
 4. Repeat the process 2 to find all states with $J=J_{max}-1$ and $m_{max}-1,m_{max}-2,\dots,-m_{max}+1$.
 5. Repeat the process 3 to find the coefficients of $J=J_{max}-2$ states. 
 
-The procedure can be repeated until $J=|j_1-j_2|$. The coefficients can be found by the orthogonality of the states. Finally, there are $(2j_1+1)(2j_2+1)$ states in the direct product rep. of $j_1$ and $j_2$. And like the [note](https://wangq1h.github.io/posts/%E6%9D%8E%E7%BE%A4%E5%92%8C%E6%9D%8E%E4%BB%A3%E6%95%B0/), the direct product rep. is reducible, which refers to the addition of the angular momentum.
+The procedure can be repeated until $J=\mid j_1-j_2\mid$. The coefficients can be found by the orthogonality of the states. Finally, there are $(2j_1+1)(2j_2+1)$ states in the direct product rep. of $j_1$ and $j_2$. And like the [note](https://wangq1h.github.io/posts/%E6%9D%8E%E7%BE%A4%E5%92%8C%E6%9D%8E%E4%BB%A3%E6%95%B0/), the direct product rep. is reducible, which refers to the addition of the angular momentum.
 
 > The representation of rotation on rank-2 tensor in Cartesian coordinates is reducible. Considering the tensor is the direct product of two 3d vector $T_{ij}=u_i\otimes v_j$. The transformation of the tensor is: $R_{ij}T_{ij}=R_iu_i\otimes R_j v_j$. If we care the reps. of rotation on this space, it is easily to confirm the reps. is direct product of rep. on $u_i$ and $v_j$. The irreps. of $u_i$ and $v_j$ are both $j-1$ reps. as we talked before. So the whole reps is $D^{j=1}\otimes D^{j=1}=D^{j=2}\oplus D^{j=1}\oplus D^{j=0}$. This why sakurai said *'The trouble with a Cartesian tensor like (3.455) is that it is reducible, that is, it can be decomposed into objects that transform differently under rotations.'* in p.233.
 {: .prompt-tip }
 ### The relationship between SO(3) and SU(2)
 Considering the $j-\frac 1 2$ reps. The matrix is actually the pauli matrix $\sigma_i$. The relationship between $J_i$ and $\sigma_i$ is:
+
 $$
 J_i=\frac 1 2\sigma_i
 $$
+
 Because $e^{\frac i2\alpha\sigma_i}=\sigma_0\cos\frac\alpha 2+i\sigma_i\sin\frac\alpha 2$, the general rep. is:
+
 $$
 \begin{align}
   D(\mathbf n,\theta)&=e^{-i\frac\alpha 2\sigma_3}e^{-i\frac\beta 2\sigma_2}e^{-i\frac\gamma 2\sigma_3}\\
@@ -772,49 +810,66 @@ $$
 \end{pmatrix}
 \end{align}
 $$
+
 If taking $\alpha=2\pi,\beta=0,\gamma=0$, we can get:
+
 $$
 D(\mathbf z,2\pi)=\begin{pmatrix}
   -1&0\\0&1
 \end{pmatrix}\neq \mathbf 1
 $$
+
 However if taking $\alpha=4\pi,\beta=0,\gamma=0$, the result is $\mathbf 1$. This tells $j-\frac 1 2$ reps. are not appropriate for SO(3). 
 Just like the $2\pi$ rotation, any rotation $0\leq\phi<2\pi$ has 2 reps. in $j-\frac 1 2$ reps., $D(R)$ and $-D(R)$. This is because the $2\pi$ rotation is not the identity. The $4\pi$ rotation is the identity. This tells that the $j-\frac 1 2$ reps. are not appropriate for SO(3). 
 
 In fact, the Lie algebra we talked above is shared by SO(3) and SU(2). However, the $j-\frac 1 2$ reps. with $0\leq\alpha<4\pi,0\leq\beta<2\pi,0\leq\gamma<\pi$ is the reps. of SU(2). The relationship between SO(3) and SU(2) is:
+
 $$
 \mathrm{SO}(3)=\frac{\mathrm{SU}(2)}{\mathbb Z_2}
 $$
+
 ### Haar measure
 In the previous section about rep. we focused on the finite group. However, Lie group is infinite as a continuous group. First we revisit the 
 orthonormality of irreps. Of course, the summation should be replaced by the integration. Focusing on 3d rotation, the volume element of parameter space is: $\mathrm d\omega=\mathrm d\alpha\sin\beta\mathrm d\beta\mathrm d\gamma$. This is called Haar measure. Calculating the volumn of parameter space of SO(3) and SU(2) gives:
+
 $$
 \begin{align}
   \Omega(\mathrm{SO}(3))&=\int_0^{2\pi}\mathrm d\alpha\int_0^\pi\sin\beta\mathrm d\beta\int_0^{2\pi}\mathrm d\gamma=8\pi^2\\
   \Omega(\mathrm{SU}(2))&=\int_0^{4\pi}\mathrm d\alpha\int_0^\pi\sin\beta\mathrm d\beta\int_0^{2\pi}\mathrm d\gamma=16\pi^2
 \end{align}
 $$
+
 Then the orthonormality of irreps. is:
+
 $$
 \int\mathrm d\omega D^{(J)*}_{ml}(\omega)D^{(J')}_{m'l'}(\omega)=\frac{\Omega}{2J+1}\delta_{JJ'}\delta_{mm'}\delta_{ll'}
 $$
+
 The character of the rep. is:
+
 $$
 \chi^{(J)}(\omega)=\sum_{m}D^{(J)}_{mm}(\omega)
 $$
+
 The orthonormality of characters is:
+
 $$
 \int\mathrm d\omega\chi^{(J)*}(\omega)\chi^{(J')}(\omega)=\Omega\delta_{JJ'}
 $$
+
 ### Angular momentum in Quantum Mechanics
 The commutation relation of angular momentum is:
+
 $$
 [L_i,L_j]=i\hbar\varepsilon_{ijk}L_k
 $$
+
 Then $\frac{L_i}\hbar$ forms the Lie algebra of SO(3). The eigenfunction of $L^2$ is:
+
 $$
-Y_{lm}(\theta,\phi)=\varepsilon\sqrt{\frac{2l+1}{4\pi}\frac{(l-\abs{m})!}{(l+\abs{m})!}}P_l^m(\cos\theta)e^{im\phi}
+Y_{lm}(\theta,\phi)=\varepsilon\sqrt{\frac{2l+1}{4\pi}\frac{(l-\mid m\mid)!}{(l+\mid m\mid)!}}P_l^m(\cos\theta)e^{im\phi}
 $$
+
 $\varepsilon=(-1)^m$ if $m\ge 0$ and $\varepsilon=1$ if $m<0$. This is also the eigenfunction of $L_z$. The eigenvalue of $L^2$ is $l(l+1)\hbar^2$ and the eigenvalue of $L_z$ is $m\hbar$. They all should be integers.
 
 Spin operator also satisfies the commutation relation of angular momentum. However, the spin is quantized as $s=\frac n 2$. The eigenvalue of $S^2$ is $s(s+1)\hbar^2$ and the eigenvalue of $S_z$ is $m\hbar$. Spin obeys the same rule as angular momentum but has nothing to do with the rotation of the particle.
