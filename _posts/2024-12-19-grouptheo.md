@@ -644,10 +644,10 @@ $$
 [J_3,J_{\pm}]=\pm J_{\pm},[J_{+},J_{-}]=2J_3
 $$
 
-Assuming the action of $J_{\pm}$ on $|m\rangle$ is:
+Assuming the action of $J_{\pm}$ on $\ket m$ is:
 
 $$
-J_{\pm}\ket{m\rangle=N_m^{(\pm)}|j,m\pm1}
+J_{\pm}\ket m=N_m^{(\pm)}\ket{m\pm1}
 $$
 
 Then we can get:
