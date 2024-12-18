@@ -1,10 +1,10 @@
 ---
-title: 物理学中的群论笔记(1)
+title: 物理学中的群论Ⅰ
 author: wangq1h
 date: 2024-12-19 22:09:00 +0800
 categories: [Group Theory]
 tags: [群论, 群表示, 李群, 李代数]
-pin: false
+pin: true
 math: true
 mermaid: true
 ---
