@@ -447,7 +447,7 @@ Because $\forall g\in G, gag^{-1}\in C_i$, thus $\forall g\in G,[g,\mathbb C_i]=
 > Because $[g,\mathbb C_i\mathbb C_j]=0$, thus $\mathbb C_i\mathbb C_j=\sum_kC_{ij}^k\mathbb C_k $. Additionally,
 >
 > * $C_{ij}^k=C_{ji}^k$.
-> * Set $\mathbb C_1=\{e\}$, $C_{ij}^{1}=\begin{cases}r_{i}&(C_{j}=C_{i^{\prime}})\\ 0&(C_{j}\neq C_{i^{\prime}}).\end{cases}$ where $C_i'=Inverse(C_i)$
+> * Set $$\mathbb C_1=\{e\}$, $C_{ij}^{1}=\begin{cases}r_{i}&(C_{j}=C_{i^{\prime}})\\ 0&(C_{j}\neq C_{i^{\prime}}).\end{cases}$$ where $C_i'=Inverse(C_i)$
 
 It's time to prove the orthonomality of irreducible characters:
 
@@ -521,7 +521,7 @@ $a$ is the number of modes and $\alpha$ is the normal coordinates index. $\sum_{
 * Rotation: for each atom, $\chi(C(\phi))=1+2\cos\phi$. Because only diagonal components contribute to the character, so we should only focus on these components. In other words, we chould find the invariant atoms as they are the rotation axises. Labeld as $N_c$, the whole character is $\chi=N_c(1+2\cos\phi)$.
 * Reflection: label the number of atoms on the reflection plane is $N_\sigma$, then $\chi(\sigma)=N_\sigma$
 * Space inversion: label the number of atoms at the origin $N_I\in\{0,1\}$, $\chi(I)=-3N_I$
-* Rotary reflection: the difference between the rotation and rotary reflection is: $D(S(\phi))=\begin{pmatrix}\cos\phi&\sin\phi&0\\ -\sin\phi&\cos\phi&0\\ 0&0&-1\end{pmatrix}\quad D(C(\phi))=\begin{pmatrix}\cos\phi&\sin\phi&0\\ -\sin\phi&\cos\phi&0\\ 0&0&1\end{pmatrix}$. So $\chi(S(\phi))=N_s(2\cos\phi-1)$. $N_s$ is the number of atoms at the origin.
+* Rotary reflection: the difference between the rotation and rotary reflection is: $$D(S(\phi))=\begin{pmatrix}\cos\phi&\sin\phi&0\\ -\sin\phi&\cos\phi&0\\ 0&0&-1\end{pmatrix}\quad D(C(\phi))=\begin{pmatrix}\cos\phi&\sin\phi&0\\ -\sin\phi&\cos\phi&0\\ 0&0&1\end{pmatrix}$$. So $\chi(S(\phi))=N_s(2\cos\phi-1)$. $N_s$ is the number of atoms at the origin.
 
 ## Quantum Mechanics and Group Theory
 
