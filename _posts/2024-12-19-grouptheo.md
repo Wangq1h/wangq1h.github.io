@@ -1,7 +1,7 @@
 ---
 title: 物理学中的群论Ⅰ
 author: wangq1h
-date: 2024-12-19 22:09:00 +0800
+date: 2024-12-18 22:09:00 +0800
 categories: [Group Theory]
 tags: [群论]
 pin: true
