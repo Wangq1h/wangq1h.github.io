@@ -647,7 +647,7 @@ $$
 Assuming the action of $J_{\pm}$ on $|m\rangle$ is:
 
 $$
-J_{\pm}|m\rangle=N_m^{(\pm)}|j,m\pm1\rangle
+J_{\pm}\ket{m\rangle=N_m^{(\pm)}|j,m\pm1}
 $$
 
 Then we can get:
