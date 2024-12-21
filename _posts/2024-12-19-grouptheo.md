@@ -1,5 +1,5 @@
 ---
-title: 物理学中的群论Ⅰ
+title: 物理学中的群论
 author: wangq1h
 date: 2024-12-18 22:09:00 +0800
 categories: [Group Theory]
@@ -873,3 +873,280 @@ $$
 $\varepsilon=(-1)^m$ if $m\ge 0$ and $\varepsilon=1$ if $m<0$. This is also the eigenfunction of $L_z$. The eigenvalue of $L^2$ is $l(l+1)\hbar^2$ and the eigenvalue of $L_z$ is $m\hbar$. They all should be integers.
 
 Spin operator also satisfies the commutation relation of angular momentum. However, the spin is quantized as $s=\frac n 2$. The eigenvalue of $S^2$ is $s(s+1)\hbar^2$ and the eigenvalue of $S_z$ is $m\hbar$. Spin obeys the same rule as angular momentum but has nothing to do with the rotation of the particle.
+
+### Wigner-Eckart Formula
+
+Given operator $O$, wavefunction $\psi$, wavefunctions is transformed as $O\psi$. Rotate the system by $U(\theta)=\exp(-\frac i\hbar\theta \hat J)$.
+
+$$
+U(\theta)\psi'=U(\theta)O U^{-1}(\theta)U(\theta)\psi\\
+$$
+
+Define $O'=U(\theta)O U^{-1}(\theta)$. For infinitesimal rotation:
+
+$$
+O'\simeq O-\frac i\hbar [\theta \hat J,O]
+$$
+
+Begin classification discussion:
+
+* If $O$ is a scalar operator, which is unchanged under space rotation. $[\hat J,O]=0$.
+* If $O=V$ is a vector operator, It should transform like $\mathbf r'=R\mathbf r=\mathbf r+\delta\theta\times \mathbf r$. Compared to the rotation under the notation of $J$, $[J_i,V_j]=i\hbar \varepsilon_{ijk}V_k$. $[\theta\cdot\hat J,V]=-i\hbar \vec\theta\times \vec V$
+
+The commuatation relation implies that if we construct a new basis:
+
+$$
+\begin{cases}
+  V_1&=-\frac1{\sqrt 2}(V_x+iV_y)\\
+  V_0&=V_z\\
+  V_{-1}&=\frac1{\sqrt 2}(V_x-iV_y)
+\end{cases}
+$$
+
+The commuatation relation with lowering and raising operators is:
+
+$$
+\begin{align}
+  [J_{\pm},V_q]&=\hbar\sqrt{(1\mp q)(2\pm q)}V_{q\pm1}\\
+  [J_3,V_q]&=\hbar qV_q
+\end{align}
+$$
+
+Revisit the $j-1$ irreps. of $\mathfrak{so}(3)$ previously discussed. The commutation relation under the new basis is:
+
+$$
+[J_i,V_q]=\sum_{m=-1}^1\bra{1,m}J_i\ket{1,q}V_m
+$$
+
+Which is just the $j-1$ irreps. of $\mathfrak{so}(3)$. Define the irreducible tensor operator $T^{(k)}_q$ as:
+
+$$
+[J_i,T^{(k)}_q]=\sum_{m=-k}^k\bra{k,m}J_i\ket{k,q}T^{(k)}_m=D^{(k)}(J_i)_{qm}T^{(k)}_m
+$$
+
+Because $e^ABe^{-A}=e^{Ad(A)}B$, the transformation of $T^{(k)}_q$ is:
+
+$$
+U(\theta)T^{(k)}_qU^{-1}(\theta)=D^{(k)}(U(\theta))_{qm}T^{(k)}_m
+$$
+
+Direct product of two irreducible tensor operators behave the same as the direct product of irreps. :
+
+$$
+S_r^{(p)}T_q^{(k)}=\sum_{s=|p-k|}^{p+k}\braket{r+q;s\mid r,p;q,k}U_{r+q}^{(s)}
+$$
+
+Back to the basis of $D^{(j)}$, which is $\ket{j,j_z;\alpha}$. $T_q^{(k)}\ket{j,j_z;\alpha}$ transforms like $D^{(k)}\otimes D^{(j)}$, which means we can also decompose the direct product of two irreps. into irreps. of $\mathfrak{so}(3)$.
+
+$$
+T_q^{(k)}\ket{j,j_z;\alpha}=\sum_{j'=|j-k|}^{j+k}\braket{q+j_z;j'\mid q,k;j_z,j}\ket{j',q+j_z;\beta}
+$$
+
+When calculating the matrix element of $T_q^{(k)}$:
+
+$$
+\bra{J,J_z;\alpha}T_q^{(k)}\ket{j,j_z;\beta}=\sum_{j'=|j-k|}^{j+k}\braket{q+j_z;j'\mid q,k;j_z,j}\braket{J,J_z;\alpha\mid j',q+j_z;\beta}
+$$
+
+Look into the second term:
+
+$$
+\begin{align}
+  \braket{J,J_z;\alpha\mid j',q+j_z;\beta}&=\delta_{Jj'}\delta_{J_z,q+j_z}\braket{J,J_z;\alpha\mid J,J_z;\beta}\\
+  &=N_{J_z-1}\bra{J,J_z;\alpha}J_+\ket{J,J_z-1;\beta}\\
+  &=\braket{J,J_z-1;\alpha\mid J,J_z-1;\beta}
+\end{align}
+$$
+
+This means the matrix element is independent of $j_z$ and $q$. Name it as the reduced matrix element $\bra{J,\alpha}\mid T^{(k)}\mid\ket{j,\beta}$. The Wigner-Eckart formula is:
+
+$$
+\begin{align}
+  \bra{J,J_z;\alpha}T_q^{(k)}\ket{j,j_z;\beta}&=\sum_{j'=|j-k|}^{j+k}\braket{q+j_z;j'\mid q,k;j_z,j}\braket{J,J_z;\alpha\mid j',q+j_z;\beta}\\
+  &=\sum_{j'=|j-k|}^{j+k}\braket{q+j_z;j'\mid q,k;j_z,j}\delta_{Jj'}\delta_{J_z,q+j_z}\bra{J,\alpha}\mid T^{(k)}\mid\ket{j,\beta}\\
+  &=\braket{J_z;J\mid q,k;j_z,j}\bra{J,\alpha}\mid T^{(k)}\mid\ket{j,\beta}
+\end{align}
+$$
+## Lie Algebra
+
+### General features
+The Lie Group is generally the exponential mapping of the Lie algebra. The Lie algebra is the tangent space of the Lie group at the identity. 
+
+**Infinite numbers of elements in Lie group are determined by finite dimensional Lie algebras.**
+
+If W is the Lie algbra of Lie group G, K is the subspace of W which satisfies $\forall X,Y\in K,[X,Y]\in K$, then K is the **subalgebra** of W. The subalgebra is called the **ideal** of W if $\forall X\in W,Y\in K,[X,Y]\in K$. If the Lie group of K is H. H is an invariant subgroup of G. 
+
+If another Lie algebra L satisfies $\forall X\in K,\forall Y\in L,[X,Y]=0$. Easy to see $X+Y$ is also a Lie algebra. **The direct sum of two Lie algebras is the Lie algebra of the direct product of two Lie groups.**
+
+If $\forall X,Y\in W,[X,Y]=0$, then W is called the **abelian Lie algebra**. The corrsponding Lie group is abelian too.
+
+**Abelian ideal**: A subset S commutes with all elements of W. 
+> Proof: first prove it is a subalgebra:
+> 
+> $\forall X,Y\in S;A,B\in W$, the jacobi identity is:
+>
+> $$
+> [A,[X,Y]]+[X,[Y,A]]+[Y,[A,X]]=0
+> $$
+>
+> From the definition, $[A,[X,Y]]=0$. Therefore $[X,Y]\in S$. Then prove it is an ideal, still from the jacobi identity.
+>
+> $$
+> [A,[B,X]]=-[[B,X],A]-[X,[A,B]]=0
+> $$
+>
+> Therefore $[B,X]\in S$.
+> {: .prompt-tip}
+
+In group theory, S is the center of W. Then comes the important definitions:
+* **Semi-simple Lie algebra**: The Lie algebra has no abelian ideal.
+* **Simple Lie algebra**: The Lie algebra has no non-trivial ideal.
+In general, semi-simple Lie algebra is the direct sum of simple Lie algebras.
+#### Cartan metric and Killing form
+The structure constants of Lie algebra is defined as:
+
+$$
+[X_i,X_j]=f_{ij}^{\quad k}X_k
+$$
+
+From the Jacobi identity, we can get:
+
+$$
+f_{ij}^{\quad m}f_{mk}^{\quad n}+f_{jk}^{\quad m}f_{mi}^{\quad n}+f_{ki}^{\quad m}f_{mj}^{\quad n}=0
+$$
+
+The Cartan metric is defined as:
+
+$$
+g_{ij}=f_{in}^{\quad m}f_{jm}^{\quad n}
+$$
+
+We can see that:
+* Cartan metric is symmetric.
+* For Abelian Lie algebra, $g_{ij}=0$.
+* For Lie algebra $W=\{X_i\}$, its ideal K is charactrized by index $a$, then the metric satisfies $g_{ai}=f_{an}^{\quad m}f_{im}^{\quad n}=f_{an}^{\quad c}f_{ic}^{\quad n}=f_{ab}^{\quad c}f_{ic}^{\quad b}$. If Ideal is abelian, then $\det g=0$.
+Then, the semi-simple Lie algebra is the Lie algebra whose Cartan metric is non-singular.
+
+The Cartan metric introduces the **Killing form**:
+
+$$
+\begin{align}
+A=a^i X_i&\quad B=b^iX_i\\
+(A,B)&=g_{ij}a^ib^j \quad g_{ij}=(X_i,X_j)
+\end{align}
+$$
+
+Killing form actually introduces the inner product of Lie algebra. 
+
+Define $f_{ijk}=f_{ij}^{\quad l}g_{lk}$. It can be proved that it is a symmetry tensor. 
+Because $(A,[B,C])=(a^iX_i,f_{jk}^{\quad l}b^jc^kX_l)=a^ib^jc^kf_{jki}$. Then $(A,[B,C])=(B,[C,A])=(C,[A,B])$. The Killing form is invariant under the adjoint transformation.
+It's time to prove **the semi-simple Lie algebra is the direct sum of simple Lie algebras**. 
+> Proof:
+> Assume semi-simple Lie algebra W includes ideal K. Define the $K^{\perp}$ as the set of $A\in W$ which satisfies $(A,K)=0$. 
+> Then $\forall X,Y\in K^{\perp},\forall Z\in K,(Z,[X,Y])=(X,[Y,Z])=0$. Therefore $[X,Y]\in K^{\perp}$. Then $K^{\perp}$ is an subalgebra of W. If 
+> $K$ is reducible, then goes back to the step1. Otherwise, $K$ is simple. Difine the index of $W,K$ and the remaining part as $i,a,\alpha$. 
+> Because $K$ is simple, $\det g_{ab}\neq0$. Name the inverse as $g^{ab}$. Using the Gram-Schmidt orthogonalization, we can get the basis of the remaining 
+> spaces, actually is the basis of $K^{\perp}$:
+>
+> $$
+> \tilde X_\alpha=X_\alpha-(X_\alpha,X_a)X_bg^{ab}
+> $$
+>
+> It means $W=K^{\perp}\cup K$. $\forall A\in K^{\perp}, C\in W$, therefore $\forall B\in K, (B,[C,A])=(C,[A,B])=(A,[B,C])=0$. 
+> Because $K$ is an ideal, $[B,C]\in K$. It implieds $[C,A]\in K^{\perp}$, which means $K^{\perp}$ is an ideal. And $[A,B]$ is perpendicular to 
+> the whole space, which means $[A,B]=0$. Therefore we proved that $W=K\oplus K^{\perp}$. If $K^{\perp}$ is reducible, then repeat the process.
+> {: .prompt-tip}
+
+From the exponential mapping relationship between Lie group and Lie algebra, we can get the structure of Lie group.
+If a Lie algebra of connected Lie group is semi-simple, then the Lie group is semi-simple. 
+Semi-simple Lie group is a direct product of simple Lie groups
+#### Representations of Lie algebra
+The n dim rep. of the element A in Lie algebra $\rho(A)$ satisfies:
+
+$$
+[\rho(X_i),\rho(X_j)]=\rho([X_i,X_j])=f_{ij}^{\quad k}\rho(X_k)
+$$
+
+This also gives the corresponding representation of Lie group $D(g)=\exp[\sum_i\theta_i\rho(X_i)]$. 
+Introduce the adjoint representation $\rho(X_i)^k_{\quad j}=f_{ij}^{\quad k}$. The commutation relation of adjoint representation is:
+
+$$
+[\rho(X_i),\rho(X_j)]^l_{\quad n}=f_{ij}^{\quad k}\rho(X_k)^l_{\quad n}
+$$
+
+Under this rep., the Killing form and Cartan metric are:
+
+$$
+\begin{align}
+  (X_i,X_j)&=g_{ij}=\mathrm{Tr}(\rho(X_i)\rho(X_j))\\
+  (A,B)&=\mathrm{Tr}(\rho(A)\rho(B))
+\end{align}
+$$
+
+The adjoint rep. is a faithful rep. of semi-simple Lie algebra, as the center of the Lie algebra is zero. 
+For Abelian Lie algebra, the adjoint rep. maps $\mathrm{ad}(X)=0$.
+
+With $\rho(X_i)=\mathrm{ad}(X_i)$, the corresponding Lie group rep. is $D(g)=\exp[\sum_i\theta_i\mathrm{ad}(X_i)]=\mathrm{Ad}(G)$. 
+This is the adjoint rep. of Lie group. 
+
+### Compact group and its Lie algebra
+Some important compact and connected Lie groups are:
+* $U(n)$: The unitary group. The Lie algebra is $\mathfrak{u}(n)$, satisfies $X^\dagger=-X$.
+* $SU(n)$: The special unitary group. The Lie algebra is $\mathfrak{su}(n)$, satisfies $\mathrm{Tr}(X)=0$ and $X^\dagger=-X$.
+* $SO(n)$: The special orthogonal group. The Lie algebra is $\mathfrak{so}(n)$, satisfies $X^T=-X$, $\mathrm{Tr}(X)=0$ and real.
+* $Sp(n)$: The symplectic group. The Lie algebra is $\mathfrak{sp}(n)$, satisfies $X^\dagger=-X$ and $J X^TJ^{-1}=X$.
+Review the adjoint reps. of these Lie algebras. Because the adjoint rep. is real, the minus sign will emerge under transpose.
+
+$$
+\begin{align}
+  \mathrm{ad}(X_i)^k_{\quad j}&=-\mathrm{ad}(X_i)^j_{\quad k}\\
+  \to f_{ij}^{\quad k}&=-f_{ji}^{\quad k}
+\end{align}
+$$
+
+This tells that the structure constants of compact Lie algebra are **antisymmetric**. As we all know $U(n)=U(1)\times SU(n)$, 
+$SU(n)$, $SO(n)$ and $Sp(n)$ are all simple Lie algebras. 
+
+Take a new basis where $\hat X_i=-iX_i$. Under this basis, the commutation relation stays the same, but $f_{ij}^{\quad k}=-if_{ij}^{\quad k}$. But 
+the Cartan metric and Killing form are:
+
+$$
+\begin{align}
+  \hat g_{ij}&=-g_{ij}\\
+  (A,B)=(\hat a,\hat b)&=\hat g_{ij}\hat a^i\hat b^j\quad \hat a^i=i a^i
+\end{align}
+$$
+
+Picking up all basis commuting with each other as $\hat H_a$, this is called Cartan subalgebra. The dimension of Cartan subalgebra is the rank of Lie algebra, 
+independent of the basis. The remaining basis is called the root basis $E_\alpha$, which satisfies:
+
+$$
+[H_a,E_\alpha]=\alpha_aE_\alpha
+$$
+
+This can be proved by matrix theory:
+> Proof:
+> Because $H_a$ commutes with each other, they can be diagonalized simultaneously. The eigenvalue of $H_a$ is $v_\alpha$ with eigenvalue $\alpha_a$. 
+> Define $\hat E_\alpha=v_\alpha^i\hat X_i$. 
+>
+> $$
+> \begin{align}
+> \mathrm{ad}(\hat H_a)^i_{\quad j}v_\alpha^j\hat X_i&=\alpha_a v_\alpha^i\hat X_i\\
+> f_{aj}^{\quad i}v_\alpha^j\hat X_i&=\alpha_a\hat E_\alpha\\
+> [\hat H_a,\hat X_j]v_\alpha^j&=\alpha_a\hat E_\alpha\\
+> [\hat H_a,\hat E_\alpha]&=\alpha_a\hat E_\alpha\\
+> \end{align}
+> $$
+> {: .prompt-tip}
+
+The vector $\alpha$ is called the root of the Lie algebra. $-\alpha$ is also the root while $E_\alpha^\dagger=E_{-\alpha}$. 
+
+Usually we choose the normalization eigenvectors $(v_\beta,v_\alpha)=\delta_{\alpha+\beta,0}$. Can prove that $[\hat E_\alpha,\hat E_{-\alpha}]=\alpha^a\hat H_a$. 
+Generally:
+
+$$
+[\hat E_\alpha,\hat E_\beta]=N_{\alpha,\beta}\hat E_{\alpha+\beta}
+$$
+
+Define $g_{ab}=\mathrm{Tr}(\hat H_a\hat H_b)$, then $N_{\alpha,\beta}=\frac{2(\alpha,\beta)}{g_{\alpha,\alpha}}$. The root basis is orthogonal to each other.
+The whole Lie algebra is charaterized by the root system $\{\hat H_a,\hat E_\alpha, \hat E_{-\alpha}\}$. 
