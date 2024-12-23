@@ -996,7 +996,7 @@ If $\forall X,Y\in W,[X,Y]=0$, then W is called the **abelian Lie algebra**. The
 > $$
 >
 > Therefore $[B,X]\in S$.
-> {: .prompt-tip}
+{: .prompt-tip}
 
 In group theory, S is the center of W. Then comes the important definitions:
 * **Semi-simple Lie algebra**: The Lie algebra has no abelian ideal.
@@ -1055,7 +1055,7 @@ It's time to prove **the semi-simple Lie algebra is the direct sum of simple Lie
 > It means $W=K^{\perp}\cup K$. $\forall A\in K^{\perp}, C\in W$, therefore $\forall B\in K, (B,[C,A])=(C,[A,B])=(A,[B,C])=0$. 
 > Because $K$ is an ideal, $[B,C]\in K$. It implieds $[C,A]\in K^{\perp}$, which means $K^{\perp}$ is an ideal. And $[A,B]$ is perpendicular to 
 > the whole space, which means $[A,B]=0$. Therefore we proved that $W=K\oplus K^{\perp}$. If $K^{\perp}$ is reducible, then repeat the process.
-> {: .prompt-tip}
+{: .prompt-tip}
 
 From the exponential mapping relationship between Lie group and Lie algebra, we can get the structure of Lie group.
 If a Lie algebra of connected Lie group is semi-simple, then the Lie group is semi-simple. 
@@ -1137,7 +1137,7 @@ This can be proved by matrix theory:
 > [\hat H_a,\hat E_\alpha]&=\alpha_a\hat E_\alpha\\
 > \end{align}
 > $$
-> {: .prompt-tip}
+{: .prompt-tip}
 
 The vector $\alpha$ is called the root of the Lie algebra. $-\alpha$ is also the root while $E_\alpha^\dagger=E_{-\alpha}$. 
 
