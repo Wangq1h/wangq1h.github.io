@@ -1261,7 +1261,7 @@ Simple roots characterize a compact simple Lie algebra. The Dynkin diagram is a 
 
 > Dynkin diagram of Lie algebra with rank 2:
 >
-> ![1735026910787](image/Note/1735026910787.png)
+> ![1735026910787](/assets/img/posts/群论image/1735026910787.png)
 {: .prompt-tip}
 
 The $r\times r$ Cartan matrix is defined as $c_{ij}=\frac{2(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j)}$. The diagonal elements are all 2. 
