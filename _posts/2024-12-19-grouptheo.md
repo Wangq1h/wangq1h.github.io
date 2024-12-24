@@ -1150,3 +1150,199 @@ $$
 
 Define $g_{ab}=\mathrm{Tr}(\hat H_a\hat H_b)$, then $N_{\alpha,\beta}=\frac{2(\alpha,\beta)}{g_{\alpha,\alpha}}$. The root basis is orthogonal to each other.
 The whole Lie algebra is charaterized by the root system $\{\hat H_a,\hat E_\alpha, \hat E_{-\alpha}\}$. 
+### Roots
+From the commutation relation of root basis, $N_{\alpha,\beta}=-N_{\beta,\alpha}=-N_{-\alpha,-\beta}^*$. 
+Using Jocobi identity, we can get:
+
+$$
+[\hat E_\alpha,[\hat E_\beta,\hat E_{-\alpha-\beta}]]+[\hat E_{-\alpha-\beta},[\hat E_\alpha,\hat E_\beta]]+[\hat E_\beta,[\hat E_{-\alpha-\beta},\hat E_\alpha]]=0
+$$
+                                                                                                                                
+Recursively, we can get: $N_{\beta,-\alpha-\beta}\alpha^a\hat H_a-N_{\alpha,\beta}(\alpha^a+\beta^a)\hat H_a+N_{-\alpha-\beta,\alpha}\beta^a\hat H_a=0$. 
+Because $\hat H_a$ is linear independent, we can get the relation between $\alpha$ and $\beta$:
+
+$$
+N_{\alpha,\beta}=N_{\beta,-\alpha-\beta}=N_{-\alpha-\beta,\alpha}
+$$
+
+Reuse the Jacobi identity:
+
+$$
+\begin{align}
+  [\hat E_\alpha,[\hat E_{-\alpha},\hat E_\beta]]+[\hat E_\beta,[\hat E_\alpha,\hat E_{-\alpha}]]+[\hat E_{-\alpha},[\hat E_\beta,\hat E_\alpha]]&=0\\
+  N_{\alpha,-\alpha-\beta}N_{-\alpha,\beta}+N_{-\alpha,\alpha+\beta}N_{\beta,\alpha}&=\alpha^a\beta^ag_{ab}
+\end{align}
+$$
+
+Using the relation derived previously, we can get:
+
+$$
+|N_{\alpha,\beta-\alpha}|^2-|N_{\alpha,\beta}|^2=(\alpha,\beta)
+$$
+
+From $[E_\alpha,E_\beta]=N_{\alpha,\beta}E_{\alpha+\beta}$, $\vec \beta+n\vec \alpha$ should also be the root. But root should be finite, so there is a maximum $n$.
+Assuming $N_{\alpha,\beta+n\alpha}=0$. In the same way, we can get: $N_{-\alpha,\beta-m\alpha=0}$. From the norm relation:
+
+$$
+\begin{align}
+  \mid N_{\alpha,\beta+n\alpha}\mid^2&=0\\
+  \mid N_{\alpha,\beta+(n-1)\alpha}\mid^2&=(\alpha,\beta+n\alpha)\\
+  \mid N_{\alpha,\beta+(n-2)\alpha}\mid^2&=(\alpha,\beta+n\alpha)+(\alpha,\beta+(n-1)\alpha)=2(\alpha,\beta)+(2n-1)(\alpha,\alpha)\\
+  \vdots\\
+  \mid N_{\alpha,\beta+k\alpha}\mid^2&=(n-k)[(\alpha,\beta)+\frac12(n+k-1)(\alpha,\alpha)]\\
+  \vdots\\
+  \mid N_{\alpha,\beta-(m+1)\alpha}\mid^2&=(n+m+1)[(\alpha,\beta)+\frac12(n-m)(\alpha,\alpha)]=0
+\end{align}
+$$
+
+Therefore:
+
+$$
+2\frac{(\alpha,\beta)}{(\alpha,\alpha)}=m-n
+$$
+
+Put back to the forth equation, we can get:
+
+$$
+\mid N_{\alpha,\beta+k\alpha}\mid^2=\frac12(n-k)(m+k+1)(\alpha,\alpha)
+$$
+
+From the second above equation, we know that $2\frac{(\alpha,\beta)}{(\alpha,\alpha)}$ and $2\frac{(\beta,\alpha)}{(\beta,\beta)}$ are both integers. Name them as $n_1$ and $n_2$. 
+Then we can get:
+
+$$
+\begin{align}
+  \cos^2\theta_{\alpha\beta}&=\frac{(\alpha,\beta)^2}{(\alpha,\alpha)(\beta,\beta)}=\frac14n_1n_2\\
+  \frac{(\beta,\beta)}{(\alpha,\alpha)}&=\frac{n_2}{n_1}
+\end{align}
+$$
+
+Because $\cos^2\theta_{\alpha\beta}\leq 1$, we can get $n_1n_2$ can only be $0,1,2,3,4$. List below:
+
+|$n_1n_2$|$\theta_{\alpha\beta}$|
+|---|---|
+|0|$\frac\pi 2$|
+|1|$\frac\pi 3,\frac{2\pi}3$|
+|2|$\frac\pi 4,\frac{3\pi}4$|
+|3|$\frac\pi 6,\frac{5\pi}6$|
+|4|$0,\frac\pi 2$|
+
+While $\vec \alpha,\vec\beta$ are roots, $\beta'=\beta-2\frac{(\alpha,\beta)}{(\alpha,\alpha)}\alpha$ is also a root. This is called the **Weyl reflection**.
+
+>**Root system of SO(3) or SU(2)**
+>
+>The root space of SO(3) is 1 dimension. Under Weyl reflection, the root is reversed. 
+{: .prompt-tip}
+
+Roots can be classified into positive or negative roots:
+* Positive roots: $\alpha_i$ is positive if $(\alpha_i,\alpha_i)>0$. The first nonzero component is positive.
+* Negative roots: $\alpha_i$ is negative if $(\alpha_i,\alpha_i)<0$. The first nonzero component is negative.
+
+If the first nonzero component of $\alpha-\beta$ is positive, then we define $\alpha>\beta$. 
+
+#### Simple roots
+$r$ smallest positive roots which are linearly independent and give basis of the root space. The root space can be expressed as:
+
+$$
+\{\vec\alpha^{(1)},\vec\alpha^{(2)},\dots,\vec\alpha^{(r)}\}
+$$
+
+If $\vec\alpha$ and $\vec\beta$ are simple roots, then $\vec\alpha-\vec\beta$ is not a root. This is because simple roots can not be expressed as the summation of positive roots. So, for simple roots, $m=0$ in $2\frac{(\alpha,\beta)}{(\alpha,\alpha)}=m-n$. Therefore, $2\frac{(\alpha,\beta)}{(\alpha,\alpha)}<0$. 
+* For simpole roots $\vec\alpha$ and $\vec\beta$, $90^\circ<\theta_{\alpha\beta}<270^\circ$.
+* $\vec\beta+vec\alpha,\vec\beta+2\vec\alpha,\dots,\vec\beta+n\vec\alpha$ are all positive roots.
+* Arbitrary root can be expressed in terms of $r$ simple roots $\vec\alpha=\pm\sum_{i=1}^rn_i\vec\alpha^{(i)}$.
+#### Dynkin diagrams
+Simple roots characterize a compact simple Lie algebra. The Dynkin diagram is a graph which represents the structure of simple roots. 
+* Simple root $\leftrightarrow \circ$
+* $120^\circ$ between two simple roots $\leftrightarrow$ connected by a line.
+* $135^\circ$ between two simple roots $\leftrightarrow$ connected by two parallel lines.
+* $150^\circ$ between two simple roots $\leftrightarrow$ connected by three parallel lines.
+* $90^\circ$ between two simple roots $\leftrightarrow$ connected by no line.
+
+> Dynkin diagram of Lie algebra with rank 2:
+>
+> ![1735026910787](image/Note/1735026910787.png)
+{: .prompt-tip}
+
+The $r\times r$ Cartan matrix is defined as $c_{ij}=\frac{2(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j)}$. The diagonal elements are all 2. 
+
+> Cartan metric of Lie algebra with rank 2:
+>
+> $$
+>\begin{align}
+  \mathrm{SU}(3):\begin{pmatrix}
+    2&-1\\-1&2
+  \end{pmatrix}\quad \mathrm{SO}(5):\begin{pmatrix}
+    2&-2\\-2&2\end{pmatrix}\quad \mathrm{G}_2:\begin{pmatrix}
+  2&-3\\-1&2
+\end{pmatrix}
+\end{align}
+> $$
+> 
+{: .prompt-tip}
+
+
+### Weights
+To find the irrep. of simple Lie algebra, for example, 
+the irreps. of $\tilde{SO}(3)$ for $j=0,\frac12 ,1$. 
+Its basis $J_3$ belongs $\hat H_a$ and $J_{\pm}$ belongs to $\hat E_{\pm\alpha}$. 
+The state vector is defined by: 
+
+$$
+\ket{\bm \mu,D}
+$$
+
+Where $\mathbf \mu$ is the weight of the irrep. with dimension of the rank $r$. ex. In SO(3), the dimension of the weight is 1, and is actually the eigenvalue of $J_3$. Generally,
+
+$$
+\begin{align}
+  \hat H_a\ket{\bm \mu,D}&=\mu_a\ket{\bm \mu,D}\\
+  \bm \mu&=(\mu_1,\mu_2,\dots,\mu_r)
+\end{align}
+$$
+
+For adjoint rep., the weight is the root. 
+
+$\hat E_{\pm\alpha}$ acts like a lowering or raising operator. From the commutation relation disscussed in section2, we can get:
+
+$$
+\begin{align}
+  \hat H_a\hat E_{\pm\alpha}\ket{\bm \mu,D}&=[\hat H_a,\hat E_{\pm\alpha}]\ket{\bm \mu,D}+\hat E_{\pm\alpha}\hat H_a\ket{\bm \mu,D}\\
+  &=(\mu_a\pm\alpha_a)\hat E_{\pm\alpha}\ket{\bm \mu,D}\\
+  \to \hat E_{\pm\alpha}\ket{\bm \mu,D}&=N_{\pm\alpha,\mu}\ket{\bm \mu\pm\alpha,D}
+\end{align}
+$$
+
+The properties of $N_{\pm\alpha,\mu}$ are:
+* $\mid N_{-\alpha,\mu}\mid^2-\mid N_{\alpha,\mu}\mid^2=(\alpha,\mu)$
+* $N_{-\alpha,\mu}=N_{\alpha,\mu-\alpha}^*$
+This agrees with the root properties discussed before.
+
+The same mathematical structure compared with roots leads to the same results of the weights:
+* If we set $\hat E_\alpha\ket{\bm \mu+p\bm\alpha,D}=0=\hat E_{-\alpha}\ket{\bm\mu-q\bm\alpha}$, then $2\frac{(\alpha,\mu)}{(\alpha,\alpha)}=q-p$.
+* $\mu'=mu-2\frac{(\alpha,\mu)}{(\alpha,\alpha)}\alpha$ is also a weight.
+* $\mid N_{\alpha,\mu+k\alpha}\mid^2=\frac12(p-k)(q+k+1)(\alpha,\alpha)$
+* Weights can be classified into positive or negative weights.
+
+State with the highest weight is uniquely determined for an irrep. D.
+> Proof:
+> Assume there are two states $\ket{\bm\mu,D}$ and $\ket{\bm\mu,D}'$ with the highest weight. Then $\ket{\bm\mu,D}'=c\hat E_{\alpha_1}\hat E_{\alpha_2}\dots\hat E_{\alpha_l}\ket{\bm\mu,D}$, with $\sum_{i=1}^l\alpha_i=0$. If there is a $\alpha_i$ which is positive, then $\hat E_{\alpha_i}\ket{\bm\mu,D}=0$. If there is a $\alpha_i$ which is negative, then $\hat E_{\alpha_i}\ket{\bm\mu,D}$ is a state with lower weight. Therefore, $\ket{\bm\mu,D}'=c\ket{\bm\mu,D}$.
+{: .prompt-tip}
+
+The irrep. of simple Lie algebra is determined by fundamental weights $\bm\mu^{(i)}$ or so-called Dynkin index:
+
+$$
+\mu:[q^1,q^2,\dots,q^r]\quad \mu^{(i)}:[0,0,\dots,1,\dots,0]
+$$
+
+Then with roots $2\frac{(\alpha_i,\mu^{(j)})}{(\alpha_i,\alpha_i)}=\delta_{ij}$, we can get the weight of the irrep. The fundamental rep. is the rep. with basis of fundamental weights. For example, the rep. $\rho^{(i)}$ is the rep. with basis of $\ket{\bm\mu^{(i)},D}$.
+
+The direct product rep. of $\rho^{(a)}(\hat X)$ and $\rho^{(b)}(\hat X)$ has basis $\ket{\bm\mu^{(a)},D}\otimes\ket{\bm\mu^{(b)},D'}$. The action of Lie algebra $\hat X$ on this basis is:
+
+$$
+\begin{align}
+  \hat X\ket{\bm\mu^{(a)},D}\otimes\ket{\bm\mu^{(b)},D'}&=\hat X\ket{\bm\mu^{(a)},D}\otimes\ket{\bm\mu^{(b)},D'}+\ket{\bm\mu^{(a)},D}\otimes\hat X\ket{\bm\mu^{(b)},D'}\\
+  [\rho^{a\times b}(\hat X)]_{ik,jl}&=[\rho^{(a)}(\hat X)]_{ij}\delta_{kl}+\delta_{ij}[\rho^{(b)}(\hat X)]_{kl}\\
+  \hat H_c\ket{\bm\mu^{(a)},D}\otimes\ket{\bm\mu^{(b)},D'}&=(\mu^{(a)}_c+\mu^{(b)}_c)\ket{\bm\mu^{(a)},D}\otimes\ket{\bm\mu^{(b)},D'}
+\end{align}
+$$
