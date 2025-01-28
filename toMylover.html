@@ -39,7 +39,7 @@
 
         // 加载灯笼模型
         const loader = new THREE.GLTFLoader();
-        loader.load('lantern/source/lantern.glb', function (gltf) {
+        loader.load('lantern/glbfile.glb', function (gltf) {
             const object = gltf.scene;
             object.scale.set(0.1, 0.1, 0.1); // 根据需要调整模型的缩放比例
             scene.add(object);
