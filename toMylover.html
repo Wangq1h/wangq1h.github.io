@@ -21,7 +21,7 @@
 <body>
     <div id="message">❤️ 新年快乐 ❤️</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script>
         // 初始化场景
         const scene = new THREE.Scene();
@@ -38,8 +38,9 @@
         scene.add(pointLight);
 
         // 加载灯笼模型
-        const loader = new THREE.OBJLoader();
-        loader.load('lantern/source/lantern_FBX.obj', function (object) {
+        const loader = new THREE.GLTFLoader();
+        loader.load('lantern/source/lantern.glb', function (gltf) {
+            const object = gltf.scene;
             object.scale.set(0.1, 0.1, 0.1); // 根据需要调整模型的缩放比例
             scene.add(object);
 
