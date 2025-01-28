@@ -21,6 +21,7 @@
 <body>
     <div id="message">❤️ 新年快乐 ❤️</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
     <script>
         // 初始化场景
         const scene = new THREE.Scene();
@@ -36,43 +37,28 @@
         pointLight.position.set(0, 0, 5);
         scene.add(pointLight);
 
-        // 创建灯笼主体
-        function createLantern() {
-            const group = new THREE.Group();
+        // 加载灯笼模型
+        const loader = new THREE.OBJLoader();
+        loader.load('lantern/source/lantern_FBX.obj', function (object) {
+            object.scale.set(0.1, 0.1, 0.1); // 根据需要调整模型的缩放比例
+            scene.add(object);
 
-            // 灯笼主体
-            const geometry = new THREE.CylinderGeometry(3, 3, 6, 32);
-            const material = new THREE.MeshPhongMaterial({
-                color: 0xff0000,
-                shininess: 100
-            });
-            const cylinder = new THREE.Mesh(geometry, material);
-            group.add(cylinder);
+            // 动画循环
+            function animate() {
+                requestAnimationFrame(animate);
 
-            // 顶部/底部金环
-            const ringGeometry = new THREE.TorusGeometry(3.1, 0.2, 16, 100);
-            const ringMaterial = new THREE.MeshStandardMaterial({ color: 0xFFD700 });
-            
-            const topRing = new THREE.Mesh(ringGeometry, ringMaterial);
-            topRing.position.y = 3;
-            group.add(topRing);
+                // 旋转灯笼
+                object.rotation.y += 0.01;
 
-            const bottomRing = new THREE.Mesh(ringGeometry, ringMaterial);
-            bottomRing.position.y = -3;
-            group.add(bottomRing);
+                // 随机生成烟花
+                if(Math.random() < 0.05) fireworks.createFirework();
+                fireworks.update();
 
-            // 添加穗子
-            const tasselGeometry = new THREE.CylinderGeometry(0.05, 0.05, 2);
-            for(let i=0; i<12; i++){
-                const tassel = new THREE.Mesh(tasselGeometry, ringMaterial);
-                const angle = (Math.PI*2/12)*i;
-                tassel.position.set(3.1*Math.cos(angle), -4, 3.1*Math.sin(angle));
-                tassel.rotation.z = Math.PI/2;
-                group.add(tassel);
+                renderer.render(scene, camera);
             }
 
-            return group;
-        }
+            animate();
+        });
 
         // 烟花系统
         class FireworkSystem {
@@ -117,26 +103,9 @@
             }
         }
 
-        // 初始化对象
-        const lantern = createLantern();
-        scene.add(lantern);
         const fireworks = new FireworkSystem();
         
         camera.position.z = 15;
-
-        // 动画循环
-        function animate() {
-            requestAnimationFrame(animate);
-
-            // 旋转灯笼
-            lantern.rotation.y += 0.01;
-
-            // 随机生成烟花
-            if(Math.random() < 0.05) fireworks.createFirework();
-            fireworks.update();
-
-            renderer.render(scene, camera);
-        }
 
         // 响应式适配
         window.addEventListener('resize', () => {
@@ -144,8 +113,6 @@
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
-
-        animate();
     </script>
 </body>
 </html>
