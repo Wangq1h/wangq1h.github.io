@@ -15,6 +15,9 @@ tabs:
   tags: 标签
   archives: 归档
   about: 关于
+  gallery: 图库
+  academic: 学术
+  happy-new-year: 新年快乐
 
 # the text displayed in the search bar & search results
 search:
