@@ -1428,7 +1428,7 @@ $$
 q^i=2\frac{(\alpha^{(i)},\mu)}{(\alpha^{(i)},\alpha^{(i)})}
 $$
 
-It is easy to prove the conclusion given before: the cartan matrix is $\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$. This also gives the Dynkin index of the adjoint rep. is $[1,1]$ (or $[2,-1]$). The transformation is given by:
+<!-- It is easy to prove the conclusion given before: the cartan matrix is $\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$. This also gives the Dynkin index of the adjoint rep. is $[1,1]$ (or $[2,-1]$). The transformation is given by: -->
 
 <!-- ![1735612947971](/assets/img/posts/群论image/1735612947971.png) -->
 
