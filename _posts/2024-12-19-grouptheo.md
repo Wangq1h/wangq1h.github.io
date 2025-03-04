@@ -1430,9 +1430,10 @@ $$
 
 It is easy to prove the conclusion given before: the cartan matrix is $\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$. This also gives the Dynkin index of the adjoint rep. is $[1,1]$ (or $[2,-1]$). The transformation is given by:
 
-![1735612947971](/assets/img/posts/群论image/1735612947971.png)
+<!-- ![1735612947971](/assets/img/posts/群论image/1735612947971.png) -->
 
-The fundamental rep. is defined by the Dynkin index $[1,0]$ and $[0,1]$, while the corresponding state vectors are $(\frac12,-\frac1{2\sqrt 3})$ and $(\frac12,\frac1{2\sqrt 3})$. They are all 3 dim rep. with the sets of weight: $[0,1],[1,-1],[-1,0]$ and $[1,0],[0,-1],[-1,1]$. The relation between the two rep. is that they are conjugate to each other. Because $-T_a^*$ also satisfy the commutation relation of SU(3) group. They are called $\mathbf 3^*$ and $\mathbf 3$ rep.. Namely, the adjoint rep. is self-conjugate.
+The fundamental rep. is defined by the Dynkin index $[1,0]$ and $[0,1]$, while the corresponding state vectors are $(\frac12,-\frac1{2\sqrt 3})$ and $(\frac12,\frac1{2\sqrt 3})$. They are all 3 dim rep. with the sets of weight: $[0,1],[1,-1],[-1,0]$ and $[1,0],[0,-1],[-1,1]$. The relation between the two rep. is that they are conjugate to each other. Because $-T_a^*$ also satisfy the commutation relation of SU(3) group. 
+They are called $\mathbf 3^*$ and $\mathbf 3$ rep.. Namely, the adjoint rep. is self-conjugate.
 
 The ireps. of SU(3) group are classified by the Dynkin index:
 ![1735753032194](/assets/img/posts/群论image/1735753032194.png)
