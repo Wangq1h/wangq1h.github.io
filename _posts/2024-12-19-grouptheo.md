@@ -1346,3 +1346,190 @@ $$
   \hat H_c\ket{\bm\mu^{(a)},D}\otimes\ket{\bm\mu^{(b)},D'}&=(\mu^{(a)}_c+\mu^{(b)}_c)\ket{\bm\mu^{(a)},D}\otimes\ket{\bm\mu^{(b)},D'}
 \end{align}
 $$
+## SU(3) Group
+### The Gell-Mann matrices
+SU(3) group is the group of unitary 3x3 matrices with determinant 1. The general form of SU(3) matrix is:
+
+$$
+U=\exp[i\frac{J_a}{2}t^a]
+$$
+
+where $J_a$ is the generator of SU(3) group. The Gell-Mann matrices are the generators of SU(3) group. The Gell-Mann matrices are:
+
+$$
+\begin{align}
+  \lambda_1&=\begin{pmatrix}
+    0&1&0\\1&0&0\\0&0&0
+  \end{pmatrix}\quad \lambda_2=\begin{pmatrix}
+    0&-i&0\\i&0&0\\0&0&0
+  \end{pmatrix}\quad \lambda_3=\begin{pmatrix}
+    1&0&0\\0&-1&0\\0&0&0
+  \end{pmatrix}\\
+  \lambda_4&=\begin{pmatrix}
+    0&0&1\\0&0&0\\1&0&0
+  \end{pmatrix}\quad \lambda_5=\begin{pmatrix}
+    0&0&-i\\0&0&0\\i&0&0
+  \end{pmatrix}\quad \lambda_6=\begin{pmatrix}
+    0&0&0\\0&0&1\\0&1&0
+  \end{pmatrix}\\
+  \lambda_7&=\begin{pmatrix}
+    0&0&0\\0&0&-i\\0&i&0
+  \end{pmatrix}\quad \lambda_8=\frac{1}{\sqrt 3}\begin{pmatrix}
+    1&0&0\\0&1&0\\0&0&-2
+  \end{pmatrix}
+\end{align}
+$$
+
+From previous discussion, $2\frac{(\alpha_i,\mu)}{(\alpha_i,\alpha_i)}=q^i$.
+
+The properties of Gell-Mann matrices are:
+* $\mathrm{tr}(\lambda_i)=0$
+* Define $T^a=\frac12\lambda^a$, the normalization is $\mathrm{tr}(T^aT^b)=\frac12\delta_{ab}$
+* The commutation relation is $[T^a,T^b]=if^{abc}T^c$, where f_{abc} is:
+
+|$abc$|$f_{abc}$|
+|---|---|
+|123|1|
+|147|$\frac12$|
+|156|$-\frac12$|
+|246|$\frac12$|
+|257|$\frac12$|
+|345|$\frac12$|
+|367|$-\frac12$|
+|458|$\frac{\sqrt 2}2$|
+|678|$\frac{\sqrt 2}2$|
+
+Under this matrix rep., 
+the cartan subalgebra of SU(3) is $H_1=T_3,H_2=T_8$. The root space of SU(3) is 2 dimension. 
+Simply choose the eigenvector as $(1,0,0),(0,1,0),(0,0,1)$, the corresponding state vector $\mu$ is computed by the corresponding eigenvalue of $H_1,H_2$, which is $\ket{\frac12,\frac1{2\sqrt3}},\ket{-\frac12,\frac1{2\sqrt3}},\ket{0,-\frac1{\sqrt3}}$.
+
+Considering the adjoint rep., $(\mathrm{ad}H_1)^i_{\quad j}=if_{3j}^{\quad i}$, $(\mathrm{ad}H_2)^i_{\quad j}=if_{8j}^{\quad i}$. This is a 8-dimensional rep. Compute the eigenvalues and eigenvectors as well:
+
+|Eigenvalue/Root|Eigenvector $v_\alpha$|
+|---|---|
+|$\pm\alpha^{(4)}=(0,0)$|$\mathbf 0$|
+|$\pm\alpha^{(3)}=(\pm1,0)$|$(1,\pm i,0,0,0,0,0,0)/\sqrt 6$|
+|$\pm\alpha^{(2)}=(\frac12,\pm\frac{\sqrt 3}2)$|$(0,0,0,1,\pm i,0,0,0)/\sqrt 6$|
+|$\mp\alpha^{(1)}=(\mp\frac12,\pm\frac{\sqrt 3}2)$|$(0,0,0,0,0,1,\pm i,0)/\sqrt 6$|
+
+The lower and raising operators are defined by $E_\alpha=\alpha^{(i)}X_i$, which is:
+
+$$
+\begin{align}
+  E_{\pm\alpha^{(3)}}&=\frac1{\sqrt 6}(T_1\pm iT_2)\\
+  E_{\pm\alpha^{(2)}}&=\frac1{\sqrt 6}(T_4\pm iT_5)\\
+  E_{\mp\alpha^{(1)}}&=\frac1{\sqrt 6}(T_6\pm iT_7)
+\end{align}
+$$
+
+The number of positive roots is 3, which is $0<\alpha^{(1)}<\alpha^{(2)}<\alpha^{(3)}$. Because $\alpha^{(1)}+\alpha^{(2)}=\alpha^{(3)}$, there are only 2 simple roots. The highest root is $\alpha^{(3)}$. The weight of the irrep. is $\mu=[q^1,q^2]$, which is determined by:
+
+$$
+q^i=2\frac{(\alpha^{(i)},\mu)}{(\alpha^{(i)},\alpha^{(i)})}
+$$
+
+It is easy to prove the conclusion given before: the cartan matrix is $\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$. This also gives the Dynkin index of the adjoint rep. is $[1,1]$ (or $[2,-1]$). The transformation is given by:
+![1735612947971](/assets/img/posts/群论image/1735612947971.png)
+
+The fundamental rep. is defined by the Dynkin index $[1,0]$ and $[0,1]$, while the corresponding state vectors are $(\frac12,-\frac1{2\sqrt 3})$ and $(\frac12,\frac1{2\sqrt 3})$. They are all 3 dim rep. with the sets of weight: $[0,1],[1,-1],[-1,0]$ and $[1,0],[0,-1],[-1,1]$. The relation between the two rep. is that they are conjugate to each other. Because $-T_a^*$ also satisfy the commutation relation of SU(3) group. They are called $\mathbf 3^*$ and $\mathbf 3$ rep.. Namely, the adjoint rep. is self-conjugate.
+
+The ireps. of SU(3) group are classified by the Dynkin index:
+![1735753032194](/assets/img/posts/群论image/1735753032194.png)
+### Higher dimensional representations
+Any reps. of SU(3) group can be constructed by the fundamental rep. and its conjugate. Define the state vector of two fundamental rep. as:
+
+$$
+\begin{align}
+  [0,1]:\ket{\frac12,\frac1{2\sqrt{3}}}=\ket{{}_1},\ket{-\frac12,\frac1{2\sqrt{3}}}=\ket{{}_2},\ket{0,-\frac1{\sqrt{3}}}=\ket{{}_3}\\
+  [1,0]:\ket{-\frac12,-\frac1{2\sqrt{3}}}=\ket{{}^1},\ket{\frac12,-\frac1{2\sqrt{3}}}=\ket{{}^2},\ket{0,\frac1{\sqrt{3}}}=\ket{{}^3}
+\end{align}
+$$
+
+The operators act on the state vectors are:
+
+$$
+\hat U\ket{{}_i}=\ket{{}_j}U^j_i,\quad \hat U\ket{{}^i}=\ket{{}^j}U_j^{i*}
+$$
+
+For direct product state, write them as:
+
+$$
+\ket{{}^{i_1}}\ket{{}^{i_2}}\dots\ket{{}^{i_n}}\ket{{}_{j_1}}\ket{{}_{j_2}}\dots\ket{{}_{j_m}}=\ket{{}^{i_1i_2\dots i_n}_{j_1j_2\dots j_m}}
+$$
+
+Focusing on the direct product state $\ket{{}_i}\ket{{}^j}$, the transformation is:
+
+$$
+\hat U\ket{{}_i}\ket{{}^j}=\ket{{}_k}\ket{{}^l}U^k_iU_l^{j*}
+$$
+
+If $i=j$, regarding that $\hat U$ is unitary as they belong to SU(3) group, we can get:
+
+$$
+\hat U\ket{{}_i}\ket{{}^i}=\ket{{}_i}\ket{{}^i}
+$$
+
+which means the direct product state is invariant under the transformation. This is the identity rep. of SU(3) group. Then turn to the symmetric and antisymmetric pairs:
+
+$$
+\begin{align}
+  \ket{{}_{(i,j)}}&=\frac{\ket{{}_i}\ket{{}_j}+\ket{{}_j}\ket{{}_i}}{\sqrt2}\\
+  \ket{{}_{[i,j]}}&=\frac{\ket{{}_i}\ket{{}_j}-\ket{{}_j}\ket{{}_i}}{\sqrt2}
+\end{align}
+$$
+
+The D.O.E. of symmetric pair is 6 and the D.O.E. of antisymmetric pair is 3. The eigenvalues of them are all $\mu^{(i)}+\mu^{(j)}$. 
+It actually gives $\mathbf 3\otimes\mathbf 3=\mathbf 6\oplus\mathbf 3^*$. The complex conjugate cases are $\mathbf 3^*\otimes\mathbf 3^*=\mathbf 6^*\oplus\mathbf 3$. Considering $\ket{{}^i_j}$, the diagonal components are identity rep. as $i=j$. The D.O.E. of the remaining part is 8, which is just the adjoint rep.. This composition is $\mathbf 3^*\otimes\mathbf 3=\mathbf 8\oplus\mathbf 1$.
+### Tensors and Young tableaux
+Considering the physical quantities respecting SU(3) group, the tensor is defined as:
+
+$$
+\ket{V}=\ket{{}_{i_1i_2\dots i_n}^{j_1j_2\dots j_m}}V_{i_1i_2\dots i_n}^{j_1j_2\dots j_m}
+$$
+
+The SU(3) transformation U acts on the tensor as:
+
+$$
+\hat U\ket V=\ket{{}_{k_1k_2\dots k_n}^{l_1l_2\dots l_m}}U^{l_1}_{j_1}U^{l_2}_{j_2}\dots U^{* i_1}_{k_1}U^{* i_2}_{k_2}\dots V_{i_1i_2\dots i_n}^{j_1j_2\dots j_m}=\ket{UV}
+$$
+
+Generally, we can decompose the tensor into symmetric and antisymmetric parts or diagonal and off-diagonal parts:
+
+$$
+\begin{align}
+  V^{ij}&=V^{(ij)}+V^{[ij]}\\
+  V^{(ij)}&=\frac{V^{ij}+V^{ji}}{2}\to [0,2]=\mathbf 6\\
+  V^{[ij]}&=\frac{V^{ij}-V^{ji}}{2}\to [1,0]=\mathbf 3^*\\
+  V^j_i&=[V^j_i-\frac13\delta^j_i(V^k_k)]+\frac13\delta^j_i(V^k_k)\\
+  &V^j_i-\frac13\delta^j_i(V^k_k)\to [1,1]=\mathbf 8\\
+  &\frac13\delta^j_i(V^k_k)\to [0,0]=\mathbf 1
+\end{align}
+$$
+
+It can be proved that the Levi-Civita tensor is invariant under the SU(3) transformation. It can act on the tensor to lower index:
+
+$$
+T^{[i,j]k}=\epsilon^{ijl}T^k_l
+$$
+
+We can use it to convert any tensor into $T^{[r_1,s_1],[r_2,s_2],\dots,[r_n,s_n]j_1j_2\dots j_m}$ for a tensor in $[n,m]$ weight.
+Young tableaux is a way to classify the tensor. The Young tableau follows the rule:
+* All $s,r,j$ are positive integers while lower than 3.
+* $r_1\leq r_2\leq\dots\leq r_m\leq j_1\leq j_2\leq\dots\leq j_m$
+* $r_1<s_i$ for all $i$
+
+From the Young tableau, we can obtain the dimension of the tensor from the Dynkin index $[n,m]$.
+
+$$
+D(n,m)=B(n,m)-B(n-1,m-1)=\frac{(n+1)(m+1)(n+m+2)}2
+$$
+### Decomposition of direct products of representations
+To decompose the direct product of reps. A and B. 
+* Name the upper index as 'a' and lower index as 'b'. If rep. of A has 3 upper indices and 2 lower indices, then it has 3 'a' and 2 'b'.
+* Write 'a' in all the boxes of the first row of B and write 'b' in all the boxes of the second row of B.
+* Pick a box 'a' one by one from the right and add it to each row of A. Repeat this process for all the boxes 'a' in B.
+* Pick a box 'b' one by one from the right and add it to each row of A. Count # of 'a' from the right to the left and also count # of 'b' in the same way. The latter has not to be larger than the former. Count # of 'a' from the top to the bottom and also count # of 'b' in the same way. The latter has not to be larger than the former.
+### Symmetry of elementary particles
+Hadrons are made of quarks, which have $u,d,s,c,b,t$ flavors. $(u,d,s)$ satisfy the basis of $\mathbf 3$, and $(\bar u,\bar d, \bar s)$ satisfy the basis of $\mathbf 3^*$. 
+
+The mesons fit the representation of $\mathbf 3\times\mathbf 3^*=\mathbf 8+\mathbf 1$. The baryons fit the representation of $\mathbf 3\times\mathbf 3\times\mathbf 3=\mathbf{10}+\mathbf 8+\mathbf 8+\mathbf 1$. The $\mathbf 10$ rep. is called decuplet, while the $\mathbf 8$ rep. is called octet. The $\mathbf 1$ rep. is called singlet.
