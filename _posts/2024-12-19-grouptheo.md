@@ -1418,7 +1418,7 @@ $$
 \begin{align}
   E_{\pm\alpha^{(3)}}&=\frac1{\sqrt 6}(T_1\pm iT_2)\\
   E_{\pm\alpha^{(2)}}&=\frac1{\sqrt 6}(T_4\pm iT_5)\\
-  E_{\mp\alpha^{(1)}}&=\frac1{\sqrt 6}(T_6\pm iT_7)
+  E_{\pm\alpha^{(1)}}&=\frac1{\sqrt 6}(T_6\pm iT_7)
 \end{align}
 $$
 
