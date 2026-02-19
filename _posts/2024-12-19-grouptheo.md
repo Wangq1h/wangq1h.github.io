@@ -8,6 +8,7 @@ pin: true
 math: true
 mermaid: true
 ---
+{% raw %}
 ## Introduction
 
 Symmetries are ubiguitous in nature.
@@ -1522,3 +1523,4 @@ To decompose the direct product of reps. A and B.
 Hadrons are made of quarks, which have $u,d,s,c,b,t$ flavors. $(u,d,s)$ satisfy the basis of $\mathbf 3$, and $(\bar u,\bar d, \bar s)$ satisfy the basis of $\mathbf 3^*$. 
 
 The mesons fit the representation of $\mathbf 3\times\mathbf 3^*=\mathbf 8+\mathbf 1$. The baryons fit the representation of $\mathbf 3\times\mathbf 3\times\mathbf 3=\mathbf{10}+\mathbf 8+\mathbf 8+\mathbf 1$. The $\mathbf 10$ rep. is called decuplet, while the $\mathbf 8$ rep. is called octet. The $\mathbf 1$ rep. is called singlet.
+{% endraw %}
