@@ -1,9 +1,25 @@
-- url: /assets/img/gallery/wy1.jpg
+- url: /assets/img/gallery/1.jpg
   alt: 图片1
   caption: 
-- url: /assets/img/gallery/wy2.jpg
+- url: /assets/img/gallery/2.jpg
   alt: 图片2
   caption: 
-- url: /assets/img/gallery/wy3.jpg
-  alt: 图片2
-  caption:
+- url: /assets/img/gallery/3.jpg
+  alt: 图片3
+  caption: 
+- url: /assets/img/gallery/4.jpg
+  alt: 图片4
+  caption: 
+- url: /assets/img/gallery/5.jpg
+  alt: 图片5
+  caption: 
+- url: /assets/img/gallery/6.jpg
+  alt: 图片6
+  caption: 
+- url: /assets/img/gallery/7.jpg
+  alt: 图片7
+  caption: 
+- url: /assets/img/gallery/8.jpg
+  alt: 图片8
+  caption: 
+
