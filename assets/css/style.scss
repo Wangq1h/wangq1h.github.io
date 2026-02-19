@@ -4,3 +4,52 @@
 @import '{{ site.theme }}';
 
 /* append your custom style below */
+
+.gallery-masonry {
+  column-count: 3;
+  column-gap: 1.5rem; /* Gap between columns */
+  padding: 1rem 0;
+
+  @media (max-width: 992px) {
+    column-count: 2;
+  }
+
+  @media (max-width: 576px) {
+    column-count: 1;
+  }
+}
+
+.gallery-item {
+  break-inside: avoid; /* Prevent items from splitting across columns */
+  margin-bottom: 1.5rem; /* Space between items vertically */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Soft rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  p {
+    margin: 0;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    color: var(--text-color); /* Use theme variable if available, or fallback */
+    background: var(--card-bg); /* Use theme variable */
+    text-align: center;
+  }
+}
