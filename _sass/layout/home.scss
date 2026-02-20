@@ -77,7 +77,7 @@
           color: inherit;
         }
 
-        > div:first-child {
+        >div:first-child {
           display: block;
           white-space: nowrap;
           overflow: hidden;
@@ -86,7 +86,9 @@
       }
     }
   }
-} /* #post-list */
+}
+
+/* #post-list */
 
 .pagination {
   color: var(--btn-patinator-text-color);
@@ -135,11 +137,15 @@
     &:last-child .page-link {
       border-radius: 50%;
     }
-  } /* .page-item */
-} /* .pagination */
+  }
+
+  /* .page-item */
+}
+
+/* .pagination */
 
 /* Tablet */
-@media all and (width >= 768px) {
+@media all and (width >=768px) {
   #post-list {
     %img-radius {
       border-radius: 0 $base-radius $base-radius 0;
@@ -173,7 +179,7 @@
 }
 
 /* Hide SideBar and TOC */
-@media all and (width <= 830px) {
+@media all and (width <=830px) {
   .pagination {
     justify-content: space-evenly;
 
@@ -186,7 +192,7 @@
 }
 
 /* Sidebar is visible */
-@media all and (width >= 831px) {
+@media all and (width >=831px) {
   #post-list {
     margin-top: 2.5rem;
   }
@@ -208,11 +214,13 @@
     .page-index {
       display: none;
     }
-  } /* .pagination */
+  }
+
+  /* .pagination */
 }
 
 /* Panel is visible */
-@media all and (width >= 1200px) {
+@media all and (width >=1200px) {
   #post-list {
     padding-right: 0.5rem;
   }
@@ -258,15 +266,36 @@
     gap: 1rem;
 
     .related-website-item {
-      flex: 1 1 calc(20% - 1rem); /* 调整每行显示三个项目 */
+      flex: 1 1 calc(20% - 1rem);
+      /* 调整每行显示三个项目 */
       text-align: center;
 
+      /* Override theme's auto-generated wrapper styles */
+      a.img-link {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 150px;
+        height: 150px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .shimmer {
+        border-radius: 50%;
+      }
+
       img.related-website-img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         object-fit: cover;
-        margin-bottom: 0.5rem; /* 增加图片与文字之间的间距 */
+        margin-bottom: 0.5rem;
+        /* 增加图片与文字之间的间距 */
       }
 
       p {
