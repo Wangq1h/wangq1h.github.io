@@ -1,13 +1,33 @@
----
----
-
-@import '{{ site.theme }}';
+--- --- @import '{{ site.theme }}';
 
 /* append your custom style below */
 
+/* --- Smooth Scrolling --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Subtle Page Entrance Animation --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#main-wrapper {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* --- Gallery Masonry --- */
 .gallery-masonry {
   column-count: 3;
-  column-gap: 1.5rem; /* Gap between columns */
+  column-gap: 1.5rem;
   padding: 1rem 0;
 
   @media (max-width: 992px) {
@@ -20,17 +40,36 @@
 }
 
 .gallery-item {
-  break-inside: avoid; /* Prevent items from splitting across columns */
-  margin-bottom: 1.5rem; /* Space between items vertically */
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
   position: relative;
   overflow: hidden;
-  border-radius: 8px; /* Soft rounded corners */
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  /* Gradient overlay on hover */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: 0 0 8px 8px;
+  }
+
+  &:hover::after {
+    opacity: 1;
   }
 
   img {
@@ -48,8 +87,52 @@
     margin: 0;
     padding: 0.5rem 0.8rem;
     font-size: 0.9rem;
-    color: var(--text-color); /* Use theme variable if available, or fallback */
-    background: var(--card-bg); /* Use theme variable */
+    color: var(--text-color);
+    background: var(--card-bg);
     text-align: center;
+  }
+}
+
+/* --- Enhanced Post Card Hover --- */
+#post-list .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* --- Section Heading Accent --- */
+.related-websites-section h2,
+.gallery-section h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #6610f2);
+    border-radius: 2px;
+  }
+}
+
+/* --- Smoother Link Transitions --- */
+a {
+  transition: color 0.25s ease;
+}
+
+/* --- Back to Top Button Enhancement --- */
+#back-to-top {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
   }
 }
