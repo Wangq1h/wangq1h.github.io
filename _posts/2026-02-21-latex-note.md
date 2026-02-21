@@ -502,7 +502,7 @@ Take $B_4$ as an example. $B_4$ is based on four strings. Obviously, all
 braiding operations can be built up with three generators, like below:
 
 <figure id="fig:enter-label">
-<img src="figs/B4.png" style="width:10cm" />
+![image](/assets/img/notes/B4.png)
 <p><span class="math inline">\(\sigma_i\)</span> is an operation which
 connects <span class="math inline">\(i\)</span>th end to <span
 class="math inline">\(i+1\)</span>th end, and the string start from
