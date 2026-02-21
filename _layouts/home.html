@@ -107,18 +107,19 @@ refactor: true
   {% include post-paginator.html %}
   {% endif %}
 
-  <!-- Gallery Section
-<div class="gallery-section mt-5">
-  <h2>画廊</h2>
-  <div class="gallery">
-    {% for image in site.data.gallery %}
-      <div class="gallery-item">
-        <img src="{{ image.url }}" alt="{{ image.alt }}">
-        <p>{{ image.caption }}</p>
+  <!-- Gallery Pinned Image Section -->
+  {% assign pinned_image = site.data.gallery | where: "pinned", true | first %}
+  {% if pinned_image %}
+  <div class="gallery-section mt-5">
+    <h2><i class="fas fa-images me-2"></i>画廊</h2>
+    <a href="{{ '/tabs/gallery/' | relative_url }}" class="gallery-pinned-home">
+      <img src="{{ pinned_image.url }}" alt="{{ pinned_image.alt }}">
+      <div class="gallery-pinned-overlay">
+        <span>查看更多 <i class="fas fa-arrow-right"></i></span>
       </div>
-    {% endfor %}
+    </a>
   </div>
-</div> -->
+  {% endif %}
 
   <!-- Related Websites Section -->
   <div class="related-websites-section mt-5">

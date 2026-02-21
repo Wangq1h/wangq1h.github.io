@@ -1,6 +1,7 @@
 - url: /assets/img/gallery/1.webp
   alt: 图片1
   caption: 
+  pinned: true
 - url: /assets/img/gallery/2.webp
   alt: 图片2
   caption: 
