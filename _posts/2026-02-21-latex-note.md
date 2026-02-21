@@ -143,11 +143,9 @@ voltage drop $V = \frac{\hbar}{2d}\dot\phi$ is zero. This reveals the
 reason why we observe the current at zero-bias in SIS Josephson
 junctions. When $I> I_C$, the potential well is disrupted $\dot V<=0$,
 so the I-V relationship back to normal. The discription can be viewed in
-the graph [1](#fig:phaselocked){reference-type="ref"
-reference="fig:phaselocked"}.
+the graph 1.
 
-![phase-locked: typical SIS](/assets/img/notes/phase-lock.png){#fig:phaselocked
-width="0.5\\linewidth"}
+![phase-locked: typical SIS](/assets/img/notes/phase-lock.png)
 
 There are three energy scale in SJTM: charging energy $E_C$, Josephson
 energy $E_J$ and the thermal energy $E_T$. The charging energy is the
@@ -173,8 +171,7 @@ The three energy scale have an estimated quantity:
     $$E_\mathrm{J}=\frac{\pi\hbar}{4e^2}\frac{\Delta_\mathrm{CP}}{R_\mathrm{N}}\tanh\left(\frac{\Delta_\mathrm{CP}}{2k_\mathrm{B}T}\right).$$
     In a Josephson junction formed between an s-wave and an N-band
     superconductor, phase difference $\phi_i$ in
-    Eq. ([\[eq:josephsonrelation\]](#eq:josephsonrelation){reference-type="ref"
-    reference="eq:josephsonrelation"}) is different among all bands. The
+    Eq. ((eq:josephsonrelation)) is different among all bands. The
     critical current becomes a phase-sensitive sum:
     $$I_C  = \sum_{i=1}^N I_{C,i}\cos\chi_i,\quad]chi_i=\phi_i-\phi_s\text{ under zero magnetic field}$$
     The critical current and resistance is described by the asymetric
@@ -200,8 +197,7 @@ for the current spectrum:
 ## Ivanchenko--Zil'Berman theory
 
 Taking thermal environment into consideration, the thermal energy gives
-the particle in [\[eq:phaseH\]](#eq:phaseH){reference-type="eqref"
-reference="eq:phaseH"} a hopping energy to jump over the wavy barrier,
+the particle in (eq:phaseH) a hopping energy to jump over the wavy barrier,
 also serving as an Ohmic resistance, absorbing the energy difference in
 the cooper tunneling. Thinking the thermal fluactuation plays a role as
 random noise voltage $V(t)$, the resistance $R$ includes junction
@@ -292,8 +288,8 @@ $Z_t(\omega)=\left(i\omega C+Z_{ext}^{-1}(\omega)\right)^{-1}$.
 ## Current-bias SJTM
 
 Notce that the I-V curve described by
-[\[eq:P(E)\]](#eq:P(E)){reference-type="eqref" reference="eq:P(E)"} and
-[\[eq:IZ\]](#eq:IZ){reference-type="eqref" reference="eq:IZ"} forbid
+(eq:P(E))) and
+(eq:IZ) forbid
 non-zero current at zero-bias. This is the nature of **phase-diffusion**
 cases.
 
@@ -314,10 +310,9 @@ resistance makes major contributions to the whole junction, which makes
 the SJTM current-biased. The I(V) curve is obtained by changing the
 current/ voltage indeed.
 
-![IV curve, Fig1](/assets/img/notes/IVcurve.png){#fig:IVcurveFig1 width="0.5\\linewidth"}
+![IV curve, Fig1](/assets/img/notes/IVcurve.png)
 
-In [2](#fig:IVcurveFig1){reference-type="ref"
-reference="fig:IVcurveFig1"}, one can find out the common aysmmetry
+In 2, one can find out the common aysmmetry
 between retrapping current $I_{re}$ and switching current $I_{sw}$, the
 former means the particle in dissipation state, or so-called 'run state'
 with $V=\braket{\dot\phi}\neq0$, is trapped by the wavy potential. The
@@ -333,7 +328,7 @@ The more interesting is the asymmetry between the $I_{sw}^+$ and
 $I_{sw}^-$, $I_{re}^+$ and $I_{re}^-$ . They conduct IV data collection
 at different conductance (at same bias 10meV), obtaining averaged
 $I_{sw}$ and $I_{re}$. From the graph
-[3](#fig:fig2asym){reference-type="ref" reference="fig:fig2asym"}, first
+3, first
 we can find out the $I_{re}$ and $I_{sw}$ are both linear to the
 conductance, which is align with the A-B formula $I_J\propto G$ ( very
 different from the scenario in multi-band cases!). Second, the asymmetry
@@ -342,7 +337,7 @@ origin of asymmetry: asymmetric phase-current relation
 ($I\neq I_c\sin\phi$) .
 
 ![Fig.2 Asymmetric Retrapping
-Current](/assets/img/notes/asymetric retrap.png){#fig:fig2asym width="0.5\\linewidth"}
+Current](/assets/img/notes/asymetric retrap.png)
 
 They then conduct the voltage-bias analysis. In low conductance regime
 (single quasi-particle tunneling regime) they identify Yu-Shiba-Rusinov
@@ -360,14 +355,12 @@ particle-hole asymmetry.
 asymmetry of height of the YSR pair state, though their bias positions
 are symmetric.** This is the evidence that YSR breaking the
 particle-hole symmetry. Another evidence is shown in
-[4](#fig:voltage-bias analysis){reference-type="ref"
-reference="fig:voltage-bias analysis"}f, where they subtract the
+4f, where they subtract the
 quasiparticle tunneling current $I_{qp}$ from the whole current curve.
 They point out the $I_{qp}$ is asymmetry between positive bias and
 negative bias regime, originating from the PHSB.
 
-![Fig.3 voltage-bias analysis](/assets/img/notes/YSR state.png){#fig:voltage-bias analysis
-width="0.5\\linewidth"}
+![Fig.3 voltage-bias analysis](/assets/img/notes/YSR state.png)
 
 It is worth noting that, the current consist
 $I_{qp}, I_J, and \quad I_{bias}$. The subtraction is based on fitting:
@@ -376,21 +369,18 @@ $$\begin{align}
     \end{align}$$ In the Extended Table of [@trahms_diode_nodate], the
 parameters are calculate by fitting:
 
-![Extended Table](/assets/img/notes/fitting.png){#fig:parameters table
-width="0.5\\linewidth"}
+![Extended Table](/assets/img/notes/fitting.png)
 
 The reconstructed I-V curve is presented in
-Fig.[6](#fig:IV reconstructed){reference-type="ref"
-reference="fig:IV reconstructed"}. We can see the original I-V curve
+Fig.6. We can see the original I-V curve
 acts like thermal fluctuation dominated IZ model, even though the
 measurement condition is the same as
-[2](#fig:IVcurveFig1){reference-type="ref" reference="fig:IVcurveFig1"}
+2
 at 50 $\mu$S conductance. **This reveals the importance of current-bias,
 which can control the $\phi$ position, while voltage bias can only
 control the averaged moving speed.**
 
-![Reconstructed I-V curve](/assets/img/notes/reconstructedIV.png){#fig:IV reconstructed
-width="0.5\\linewidth"}
+![Reconstructed I-V curve](/assets/img/notes/reconstructedIV.png)
 
 The article then **claim the $I_{qp}$ plays a role of damping force
 (modifing the resisitance)**. Though the resistance $R_n$ of the
@@ -492,7 +482,7 @@ other electrons and phonons.
 
 Thinking about a model like:
 
-![Braid Model](/assets/img/notes/braidmodel.png){width="10cm"}
+![Braid Model](/assets/img/notes/braidmodel.png)
 
 This model is composed of several tied braids, obeying the rules:
 
@@ -535,8 +525,7 @@ composed of $n-1$ generators with a braid relations:
 Here is a diagram that can illustrate the physical mean of braid
 relations:
 
-![braid relations](/assets/img/notes/braidrelation.png){#fig:enter-label
-width="10cm"}
+![braid relations](/assets/img/notes/braidrelation.png)
 
 In a word, the equivalent of two juxtapositions means each initial state
 in both of them evolves in a same (across or beneath) way to the same
@@ -548,7 +537,7 @@ results in the infinite size of $B_N$ ($S_N$ has a finite size of $N!$.
 The richness of the braid group is the key fact enabling quantum
 computation through quasiparticle braiding.
 
-# Majorana Fermion {#sec:MajoranaFermion}
+# Majorana Fermion 
 
 Begin with Dirac Equation: $$\label{eq:DiracEquation}
   \left( i \gamma^\mu \partial_\mu - m \right) \psi = 0$$ The Dirac
@@ -594,19 +583,16 @@ $\psi$.
 
 However, Majorana representation is not unique in any sense. There are
 infinitely many choices of the Dirac matrices which satisfy
-[\[eq:CliffordAlgebra\]](#eq:CliffordAlgebra){reference-type="eqref"
-reference="eq:CliffordAlgebra"} and
-[\[eq:3.3\]](#eq:3.3){reference-type="eqref" reference="eq:3.3"}. An
+(eq:CliffordAlgebra) and
+(eq:3.3). An
 important theorem says that if there are two choices of Dirac matrices,
 both satisfying
-[\[eq:CliffordAlgebra\]](#eq:CliffordAlgebra){reference-type="eqref"
-reference="eq:CliffordAlgebra"} and
-[\[eq:3.3\]](#eq:3.3){reference-type="eqref" reference="eq:3.3"}, they
+(eq:CliffordAlgebra) and
+(eq:3.3), they
 will be related by a similarity transformation involving a unitary
 matrix. In other words, the general solution of
-[\[eq:CliffordAlgebra\]](#eq:CliffordAlgebra){reference-type="eqref"
-reference="eq:CliffordAlgebra"} and
-[\[eq:3.3\]](#eq:3.3){reference-type="eqref" reference="eq:3.3"} can be
+(eq:CliffordAlgebra) and
+(eq:3.3) can be
 obtained from the Majorana representation as:
 $$\Tilde{\gamma}^\mu=U^{\dagger}\gamma^\mu U$$ where U is a unitary
 matrix. Then for a Majorna solution to the Dirac equation $\psi$, a
@@ -621,7 +607,7 @@ Majorana fermion field satisfy: $$\psi = \hat\psi=\gamma^0C\psi^*$$
 Interestingly, $\hat\psi$ can be proved as the charge conjugation of
 $\psi$. This is commonly stated as the anti-Majorana fermion is itself.
 
-# Anyons {#sec:Anyons}
+# Anyons 
 
 In physics, the exchange of two identical particles will not change our
 observation of the system, which means the probability will be
@@ -636,13 +622,13 @@ the phase factor is $-1$. However, if our consideration is limited to
 2-dimensional space, the phase factor can be any value and anyons
 emerge.
 
-![Anyon[@simula_quantised_2019]](anyon.png){#fig:anyon width="50%"}
+![Anyon[@simula_quantised_2019]](/assets/img/notes/anyon.png)
 
 In 3-dimensional space, any closed path $C$ is topologically equivalent
 to a single point, whether it includes a particle or not. This means
 that the path can be continuously deformed to a point without breaking.
 Recall that if we exchange two identical particles like c-part in
-Fig. [9](#fig:anyon){reference-type="ref" reference="fig:anyon"}, the
+Fig. 9, the
 operation is equivalent to a closed loop of one of them. The rotation of
 the reference point $p$ around the particle is equivalent to a closed
 loop of the particle around the reference point. So the exchange of two
@@ -712,9 +698,9 @@ type b anyon which contains $n$ type a anyons gain
 $\theta_{bb}=n^2\theta$. Given another type c quasiparticle which
 contains $k$ particles, a type d particle which is fused by b and c has
 a statistics $\theta_{dd}=(n+k)^2\theta$. It is shown in
-[10](#fig:5){reference-type="ref" reference="fig:5"}.
+10.
 
-![Abelian anyons' fusion](/assets/img/notes/Abelfusion.png){#fig:5 width="12cm"}
+![Abelian anyons' fusion](/assets/img/notes/Abelfusion.png)
 
 ### Fusion Law
 
@@ -751,8 +737,7 @@ In this specific case, the transformation is:
 $$\psi_a=F_{ab}\Tilde{\psi}_b\quad a,b=\mathbf{1},\psi$$ More generally,
 the F matrix should be expressed like $F^{ijk}_m$.
 
-![F matrix graphic explanation](/assets/img/notes/Fmatrix.png){#fig:enter-label
-width="10cm"}
+![F matrix graphic explanation](/assets/img/notes/Fmatrix.png)
 
 ### R matrix
 
@@ -875,8 +860,7 @@ There are three possible non-zero cases:
 
 $$H=\sum_{\mathbf{k}\sigma}\epsilon_{\mathbf{k}\sigma}c_{\mathbf{k}\sigma}^\dagger c_{\mathbf{k}\sigma}+\sum_{\mathbf{k},\mathbf{k}^{\prime}}V_{\mathbf{k},\mathbf{k}^{\prime}}c_{\mathbf{k}\uparrow}^\dagger c_{-\mathbf{k}\downarrow}^\dagger c_{-\mathbf{k}^{\prime}\downarrow}c_{\mathbf{k}^{\prime}\uparrow}$$
 For s-wave manifestation the potential is the
-Eq. ([\[eq:swaveV\]](#eq:swaveV){reference-type="ref"
-reference="eq:swaveV"}), then it takes the form:
+Eq. ((eq:swaveV)), then it takes the form:
 $$\begin{aligned}&H=\sum_{|\epsilon_{\mathbf{k}}|<\omega_{D},\sigma}\epsilon_{\mathbf{k}}c_{\mathbf{k}\sigma}^{\dagger}c_{\mathbf{k}\sigma}-\frac{g_{0}}{\mathrm{V}}A^{\dagger}A.\\&A^{\dagger}=\sum_{|\epsilon_{\mathbf{k}}|<\omega_{D}}c_{\mathbf{k}\uparrow}^{\dagger}c_{-\mathbf{k}\downarrow}^{\dagger},\quad A=\sum_{|\epsilon_{\mathbf{k}^{\prime}}|<\omega_{D}}c_{-\mathbf{k}^{\prime}\downarrow}c_{\mathbf{k}^{\prime}\uparrow}\end{aligned}$$
 The **Order Parameter** is set as the density of pair operator:
 $$\Delta=|\Delta|e^{i\phi}=-\frac{g_0}{\mathrm{V}}\langle\hat{A}\rangle=-g_0\int_{|\epsilon_\mathbf{k}|<\omega_D}\frac{d^3k}{(2\pi)^3}\langle c_{-\mathbf{k}\downarrow}c_{\mathbf{k}\uparrow}\rangle$$
@@ -913,7 +897,7 @@ $\clubsuit$)**]{style="color: OliveGreen"} Near Fermi surface, the
 quasiparticle is the mixture of electrons and holes, leading to a gap
 openning.
 
-![Superconducting gap](/assets/img/notes/1.png){width="0.5\\linewidth"}
+![Superconducting gap](/assets/img/notes/1.png)
 
 ## Nambu Formalism
 
@@ -1008,8 +992,7 @@ $$\Delta_{s_1s_2}(\boldsymbol{k})\quad=\quad\frac{1}{\boldsymbol{N}}\sum_{\bolds
 With the generalized Nambu basis:
 $$\Psi_{\mathbf{k}}=\left(c_{\mathbf{k}\uparrow},c_{\mathbf{k}\downarrow},c_{-\mathbf{k}\uparrow}^{\dagger},c_{-\mathbf{k}\downarrow}^{\dagger}\right)^{T},$$
 The matrix rep. of superconducting Hamiltonian has the similar form to
-Eq. ([\[eq:Nambu\]](#eq:Nambu){reference-type="ref"
-reference="eq:Nambu"}), with 4 dimension, called **BdG Hamiltonian**:
+Eq. ((eq:Nambu)), with 4 dimension, called **BdG Hamiltonian**:
 $$H_{BdG}(\boldsymbol{k})=\begin{bmatrix}H_0(\boldsymbol{k})&\Delta(\boldsymbol{k})\\\\\Delta^\dagger(\boldsymbol{k})&-H_0^t(\boldsymbol{-k})\end{bmatrix}$$
 **Because a Cooper pair is made of identical fermions, its two--particle
 wavefunction must be antisymmetric under exchanging the two electrons.**
@@ -1033,8 +1016,7 @@ complete basis of SU(2). $\phi$ and $d_i$ are the C-G coefficients.
 
 # Cuprates
 
-![The phase diagram of Cuprates](/assets/img/notes/cuprates.png){#fig:enter-label
-width="0.5\\linewidth"}
+![The phase diagram of Cuprates](/assets/img/notes/cuprates.png)
 
 The superconductivity of cuprates is related to the square planar
 CuO$_2$. **Effective Habbard Model** can describe:
@@ -1074,8 +1056,7 @@ inserting the identity into both sides gives $$\begin{aligned}
 H=(P+Q)H(P+Q)=PHP+PHQ+QHP+QHQ. \label{eq:block-expansion}
 \end{aligned}$$ Take an arbitrary vector $v\in\mathcal H$ and split it
 as $v=x+y$ with $x=Pv\in\mathcal H_P,\ y=Qv\in\mathcal H_Q$. Then, from
-[\[eq:block-expansion\]](#eq:block-expansion){reference-type="eqref"
-reference="eq:block-expansion"}, $$\begin{aligned}
+(eq:block-expansion), $$\begin{aligned}
 Hv&=(PHP+PHQ+QHP+QHQ)(x+y)\\
 &=(PHP\,x+PHQ\,y)+(QHP\,x+QHQ\,y).
 \end{aligned}$$ Thus the components of $Hv$ in each subspace are
@@ -1084,8 +1065,7 @@ PHv=PHP\,x+PHQ\,y,\qquad QHv=QHP\,x+QHQ\,y. \label{eq:components}
 \end{aligned}$$ Representing the vector and its image by column vectors
 of their components,
 $v\widehat{=}\binom{x}{y},\ Hv\widehat{=}\binom{PHv}{QHv},$ equation
-[\[eq:components\]](#eq:components){reference-type="eqref"
-reference="eq:components"} yields $$\begin{aligned}
+(eq:components) yields $$\begin{aligned}
 Hv\ \widehat{=}\ 
 \begin{pmatrix}
 PHP & PHQ\\
@@ -1174,8 +1154,7 @@ H_3&=-\frac{t^2}{U}\sum_{\langle ij\rangle,\langle jk\rangle,s}\!
 \end{aligned}$$ It describes correlated hopping from $i$ to $k$ through
 $j$ conditioned on the spin/occupancy at $j$. In an antiferromagnetic
 background (and dilute-hole limit),
-[\[eq:H3-operator\]](#eq:H3-operator){reference-type="eqref"
-reference="eq:H3-operator"} reduces effectively to next-nearest-neighbor
+(eq:H3-operator) reduces effectively to next-nearest-neighbor
 hole motion on a single sublattice with amplitude $-t^2/U$:
 $$\begin{aligned}
 H_3\ \Rightarrow\ 
@@ -1251,8 +1230,7 @@ no--double--occupancy subspace, $n_i=1-h_i$. Then $$\begin{aligned}
 &=\sum_{\langle ij\rangle}(1-h_i)(1-h_j)
 =N_{\rm bond}-z\sum_i h_i+\sum_{\langle ij\rangle}h_i h_j.
 \end{aligned}$$ Substituting into
-[\[eq:HJ_ninj\]](#eq:HJ_ninj){reference-type="eqref"
-reference="eq:HJ_ninj"} and absorbing the constant and linear terms into
+(eq:HJ_ninj) and absorbing the constant and linear terms into
 the chemical potential yields an explicit two--body interaction:
 $$\begin{aligned}
 H_{\rm int}^{(2)}=-\sum_{\langle ij\rangle}\varepsilon_{ij}\,h_i h_j,
@@ -1298,10 +1276,8 @@ with $r$ according to $f(r/\xi_{\rm AF})$.
 #### Step 6. Effective two--hole Hamiltonian.
 
 Combining the kinetic term
-[\[eq:Hkin\]](#eq:Hkin){reference-type="eqref" reference="eq:Hkin"} with
-the interaction [\[eq:H2hole_nn\]](#eq:H2hole_nn){reference-type="eqref"
-reference="eq:H2hole_nn"}--[\[eq:Veff_r\]](#eq:Veff_r){reference-type="eqref"
-reference="eq:Veff_r"}, the effective Hamiltonian for two holes reads
+(eq:Hkin) with
+the interaction (eq:H2hole_nn)--(eq:Veff_r), the effective Hamiltonian for two holes reads
 $$\begin{aligned}
 H_{\rm pair}
 &=-t_{\rm eff}\sum_{r}\sum_{i\neq -j}\sum_{\sigma}h^\dagger_{r+i a_0+j a_0,\sigma}\,h_{r,\sigma}
@@ -1330,8 +1306,7 @@ discussed by Schrieffer, Wen, and Zhang.
 ## Intrinsic p-wave superconductor
 
 Using Nambu formalism listed above
-Eq. ([\[eq:Nambu\]](#eq:Nambu){reference-type="ref"
-reference="eq:Nambu"}):
+Eq. ((eq:Nambu)):
 $$\hat{H}=\begin{bmatrix}\hat{h}&\hat{\Delta}\\\hat{\Delta}^\dagger&-\hat{h}^T\end{bmatrix}\quad \hat{h}=\left(-\frac{1}{2m}\nabla^2-\epsilon_f\right)I$$
 Contrary to the spherical symmetry function in s-wave pairing
 Superconductor, the gap function here should be **skew symmetry** here.
@@ -1569,7 +1544,7 @@ calculation[@wu_topological_2016]. They also announced the Se
 concentration will influence the Te height, and the critical topological
 phase transition will occur as $x=0.7$ in FeTe$_{1-x}$Se$_x$.
 
-::: {#tab:surface_analysis}
+::: 
   =.5=**Name**                                         = **Mechanism**                                                            = **Advantage**                                                     = **Disadvantage**                                                                                  **Resolution**
   ---------------------------------------------------- -------------------------------------------------------------------------- ------------------------------------------------------------------- ----------------------------------------------------------------------------------------- -----------------------------------
   =.5=Energy-Dispersive X-ray Spectroscopy (EDS/EDX)   = Uses the beam to excite characteristic X-rays from the sample            = Fast and suitable for SEM/TEM                                     = Insensitive to light elements                                                            $\ge$`<!-- -->`{=html}100 $\mu$m
@@ -1585,28 +1560,25 @@ phase transition will occur as $x=0.7$ in FeTe$_{1-x}$Se$_x$.
 
 The $\relax I/\relax V$ spectrum can also assist the atom
 identification. Se, Te, and defect have different STS curve on the site
-Fig. [13](#fig:STS FTS){reference-type="ref" reference="fig:STS FTS"}.
+Fig. 13.
 Using traditional ML method, e.g. cluster algorithm, K-means algorithm,
 and SVD, can distinguish the
 atoms[@oli_atomic-scale_2023; @louca_local_2010]. [**($\clubsuit$ TODO:
 Whether to put this method into the draft?
 $\clubsuit$)**]{style="color: OliveGreen"}
 
-![Se, Te, and defect STS curve.](/assets/img/notes/2.png){#fig:STS FTS
-width="0.5\\linewidth"}
+![Se, Te, and defect STS curve.](/assets/img/notes/2.png)
 
 ## Fe(Se, S) / FeSe
 
-![Enter Caption](/assets/img/notes/FeSeSimage.png){#fig:placeholder
-width="0.5\\linewidth"}
+![Enter Caption](/assets/img/notes/FeSeSimage.png)
 
 FeSe is a prototypical s$^{\pm}$-wave superconductor with electronic
 nematicity and orbital-selective Cooper pairing preferentially from the
 $d_{yz}$ orbitals of Fe.
 
 It is observed that the linear relationship
-Eq. ([\[eq:linearrelationship\]](#eq:linearrelationship){reference-type="ref"
-reference="eq:linearrelationship"}) is broken in Nb-FeSe spectrum, this
+Eq. ((eq:linearrelationship)) is broken in Nb-FeSe spectrum, this
 indicates the Josephson current in this case is adjusted due to phase
 difference in $s^{\pm}$ orbitals.
 
@@ -1634,8 +1606,7 @@ FeSe$_{1-x}$S$_x$ [@hanaguri_two_2018]:
     interactions simultaneously. The superconducting gap shrinks with
     increasing $x$.
 
-![FeSe Phase Diagram](/assets/img/notes/fesephase.png){#fig:placeholder
-width="0.5\\linewidth"}
+![FeSe Phase Diagram](/assets/img/notes/fesephase.png)
 
 ### BQPI analysis
 
@@ -1645,8 +1616,7 @@ at M point, which can be seen from FFT of $g(r,V=0.6meV)$.
 # Pair Density Waves
 
 Review the
-Eq. ([\[eq:CooperEnergy\]](#eq:CooperEnergy){reference-type="ref"
-reference="eq:CooperEnergy"}), under an infinitesimal attractive
+Eq. ((eq:CooperEnergy)), under an infinitesimal attractive
 potential the electrons above the FS and below the Debye frequency tend
 to form pairs, which has zero momentum at all. However, the emergent
 unconventional superconducting phenomenon indicates the potential
