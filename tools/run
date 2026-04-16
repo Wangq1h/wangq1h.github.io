@@ -2,4 +2,16 @@
 #
 # Run jekyll serve and then launch the site
 
-bundle exec jekyll s -H 0.0.0.0 -l
+set -eu
+
+source "$(cd "$(dirname "$0")" && pwd)/lib/use-preferred-ruby.sh"
+
+use_preferred_ruby
+
+args=(-H 0.0.0.0)
+
+if [[ "${JEKYLL_LIVERELOAD:-0}" == "1" ]]; then
+  args+=(-l)
+fi
+
+bundle exec jekyll s "${args[@]}"

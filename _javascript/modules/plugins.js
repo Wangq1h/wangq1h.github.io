@@ -1,4 +1,5 @@
 export { categoryCollapse } from './components/category-collapse';
+export { galleryCarousel } from './components/gallery-carousel';
 export { initClipboard } from './components/clipboard';
 export { imgLazy } from './components/img-lazyload';
 export { imgPopup } from './components/img-popup';

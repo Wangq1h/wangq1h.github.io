@@ -108,7 +108,7 @@ refactor: true
   {% endif %}
 
   <!-- Gallery Pinned Image Section -->
-  {% assign pinned_image = site.data.gallery | where: "pinned", true | first %}
+  {% assign pinned_image = site.data.gallery.featured %}
   {% if pinned_image %}
   <div class="gallery-section mt-5">
     <h2><i class="fas fa-images me-2"></i>画廊</h2>

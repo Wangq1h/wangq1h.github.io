@@ -1,29 +1,92 @@
-- url: /assets/img/gallery/1.webp
-  alt: 图片1
-  caption: 
-  # pinned: true
-- url: /assets/img/gallery/2.webp
-  alt: 图片2
-  caption: 
-- url: /assets/img/gallery/3.webp
-  alt: 图片3
-  caption: 
-- url: /assets/img/gallery/4.webp
-  alt: 图片4
-  caption: 
-- url: /assets/img/gallery/5.webp
-  alt: 图片5
-  caption: 
-- url: /assets/img/gallery/6.webp
-  alt: 图片6
-  caption: 
-- url: /assets/img/gallery/7.webp
-  alt: 图片7
-  caption: 
-- url: /assets/img/gallery/8.webp
-  alt: 图片8
-  caption: 
-- url: /assets/img/gallery/9.jpg
-  alt: 图片9
-  caption: 
-  pinned: true
+meta:
+  eyebrow: Nikon Photography
+  title: 流光岁月，似水年华
+  description: 世界的形貌，时代的谱图，在曝光瞬间扫描与定格。
+  suggestion: 旧作已经并回四个主题里。现在每一组都改成居中的横向画廊，方便顺着节奏慢慢拖看前后几张。
+
+featured:
+  url: /assets/img/gallery/8.webp
+  alt: 桥下立交结构的暗部透视
+
+categories:
+  - id: city
+    name: 风光摄影
+    summary: 这一组只留下真正偏自然景观的画面，让视线先落在水线、礁石和空气感上，而不是建筑与结构。
+    images:
+      - url: /assets/img/gallery/7.webp
+        alt: 海边岩石与水面
+      - url: /assets/img/gallery/4.webp
+        alt: 林间木质结构装置
+
+  - id: ecology
+    name: 生态摄影
+    summary: 花枝、花瓣和猫的姿态被收在同一组里，让这一段更柔软，也更像从生活里慢慢捞出来的细小呼吸。
+    images:
+      - url: /assets/img/gallery/portfolio/ecology/crimson-rose.webp
+        alt: 深红色月季特写
+      - url: /assets/img/gallery/portfolio/ecology/cream-rose.webp
+        alt: 奶油色月季花瓣特写
+      - url: /assets/img/gallery/portfolio/ecology/blush-rose.webp
+        alt: 浅粉色月季特写
+      - url: /assets/img/gallery/portfolio/ecology/blossom-in-sky.webp
+        alt: 蓝天下的一枝粉色花朵
+      - url: /assets/img/gallery/portfolio/ecology/cat-behind-tree.webp
+        alt: 树干后探头的橘白猫
+      - url: /assets/img/gallery/portfolio/ecology/hillside-cat.webp
+        alt: 坡地上坐着的橘白猫
+      - url: /assets/img/gallery/9.jpg
+        alt: 盛开的红梅花枝特写
+      - url: /assets/img/gallery/5.webp
+        alt: 草地上晒太阳的黑猫
+      - url: /assets/img/gallery/1.webp
+        alt: 田埂上的猫与两只小鸟
+
+  - id: birding
+    name: 观鸟记录
+    summary: 这一组专门留给停驻、掠水和群飞的瞬间，让画面在横向移动时更像一条不断延长的飞行轨迹。
+    images:
+      - url: /assets/img/gallery/portfolio/birding/owl-on-branch.webp
+        alt: 停在树枝上的鸟类特写
+      - url: /assets/img/gallery/portfolio/birding/blackbird-on-branch.webp
+        alt: 绿叶背景中的枝头小鸟
+      - url: /assets/img/gallery/portfolio/birding/diving-waterbird.webp
+        alt: 水面上快速掠过的水鸟
+      - url: /assets/img/gallery/portfolio/birding/bird-by-skyscraper.webp
+        alt: 飞鸟掠过高楼前方
+      - url: /assets/img/gallery/2.webp
+        alt: 沙地和堤岸边聚集的鸟群
+      - url: /assets/img/gallery/3.webp
+        alt: 枝头和水边栖息的白鹭群
+      - url: /assets/img/gallery/6.webp
+        alt: 枝叶间停驻的小鸟
+      - url: /assets/img/gallery/portfolio/birding/bailu.jpg
+        alt: 宿舍楼前的白鹭
+
+  - id: humanity
+    name: 人文摄影
+    summary: 建筑、公共装置、雕塑和日常陈设都回到这一组里，更强调人造空间、生活痕迹和观察者与场景之间的关系。
+    images:
+      - url: /assets/img/gallery/8.webp
+        alt: 桥下立交结构的暗部透视
+      - url: /assets/img/gallery/portfolio/city/arcade-perspective.webp
+        alt: 建筑拱廊内部的透视光影
+      - url: /assets/img/gallery/portfolio/city/stairwell-structure.webp
+        alt: 混凝土楼梯的几何结构
+      - url: /assets/img/gallery/portfolio/city/overhead-concrete.webp
+        alt: 仰拍建筑与天光交界
+      - url: /assets/img/gallery/portfolio/city/shadowed-geometry.webp
+        alt: 阴影中的建筑切面
+      - url: /assets/img/gallery/portfolio/city/tower-courtyard.webp
+        alt: 高楼与近景空间形成夹角透视
+      - url: /assets/img/gallery/portfolio/humanity/rocket-installation.webp
+        alt: 户外展陈中的火箭装置
+      - url: /assets/img/gallery/portfolio/humanity/shelf-collection.webp
+        alt: 摆满模型和玩偶的陈列架
+      - url: /assets/img/gallery/portfolio/humanity/bronze-boar.webp
+        alt: 巷道中的雕塑
+      - url: /assets/img/gallery/portfolio/humanity/longtengroad.jpg
+        alt: 龙腾路上的街景
+      - url: /assets/img/gallery/portfolio/humanity/lab.jpg
+        alt: 老鼠洞
+      - url: /assets/img/gallery/portfolio/humanity/xupubridge.jpg
+        alt: 徐浦大桥下的结构透视

@@ -8,6 +8,8 @@
 
 set -eu
 
+source "$(cd "$(dirname "$0")" && pwd)/lib/use-preferred-ruby.sh"
+
 SITE_DIR="_site"
 
 _config="_config.yml"
@@ -49,6 +51,8 @@ read_baseurl() {
 }
 
 main() {
+  use_preferred_ruby
+
   # clean up
   if [[ -d $SITE_DIR ]]; then
     rm -rf "$SITE_DIR"
