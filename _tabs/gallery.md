@@ -15,7 +15,7 @@ order: 5
 <div class="curated-gallery">
   <section class="gallery-hero">
     <div class="gallery-hero-frame">
-      <img src="{{ featured.url }}" alt="{{ featured.alt }}" loading="eager" fetchpriority="high">
+      <img src="{{ featured.url }}" alt="{{ featured.alt }}" loading="eager" fetchpriority="high" draggable="false">
     </div>
 
     <div class="gallery-hero-copy">
@@ -56,7 +56,7 @@ order: 5
         <div class="gallery-carousel-track" data-gallery-carousel tabindex="0" aria-label="{{ category.name }}">
           {% for image in category.images %}
             <figure class="gallery-carousel-item">
-              <img src="{{ image.url }}" alt="{{ image.alt }}" loading="lazy">
+              <img src="{{ image.url }}" alt="{{ image.alt }}" loading="lazy" draggable="false">
             </figure>
           {% endfor %}
         </div>

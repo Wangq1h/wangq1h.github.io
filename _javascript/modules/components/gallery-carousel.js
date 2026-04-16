@@ -71,20 +71,30 @@ export function galleryCarousel() {
     let startScrollLeft = 0;
     let hasDragged = false;
     let snapTimer = null;
+    let activePointerId = null;
 
     const scheduleSnap = () => {
       window.clearTimeout(snapTimer);
       snapTimer = window.setTimeout(() => centerNearestSlide(track), 120);
     };
 
-    const stopDragging = () => {
-      if (!isDragging) {
+    const stopDragging = (event) => {
+      if (activePointerId !== null && event && event.pointerId !== activePointerId) {
         return;
       }
 
-      isDragging = false;
-      track.classList.remove('is-dragging');
-      scheduleSnap();
+      if (isDragging) {
+        isDragging = false;
+        track.classList.remove('is-dragging');
+
+        if (activePointerId !== null && track.hasPointerCapture(activePointerId)) {
+          track.releasePointerCapture(activePointerId);
+        }
+
+        scheduleSnap();
+      }
+
+      activePointerId = null;
     };
 
     track.addEventListener('pointerdown', (event) => {
@@ -92,22 +102,29 @@ export function galleryCarousel() {
         return;
       }
 
-      isDragging = true;
       hasDragged = false;
+      isDragging = false;
+      activePointerId = event.pointerId;
       startX = event.clientX;
       startScrollLeft = track.scrollLeft;
-      track.classList.add('is-dragging');
-      track.setPointerCapture(event.pointerId);
     });
 
     track.addEventListener('pointermove', (event) => {
-      if (!isDragging) {
+      if (activePointerId === null || event.pointerId !== activePointerId) {
         return;
       }
 
       const delta = event.clientX - startX;
-      if (Math.abs(delta) > 6) {
+
+      if (!isDragging && Math.abs(delta) > 6) {
+        isDragging = true;
         hasDragged = true;
+        track.classList.add('is-dragging');
+        track.setPointerCapture(event.pointerId);
+      }
+
+      if (!isDragging) {
+        return;
       }
 
       track.scrollLeft = startScrollLeft - delta;
@@ -152,10 +169,19 @@ export function galleryCarousel() {
       'scroll',
       () => {
         updateSlideState(track);
+
+        if (isDragging) {
+          return;
+        }
+
         scheduleSnap();
       },
       { passive: true }
     );
+
+    track.addEventListener('dragstart', (event) => {
+      event.preventDefault();
+    });
 
     track.addEventListener('keydown', (event) => {
       if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
