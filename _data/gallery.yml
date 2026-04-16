@@ -9,11 +9,11 @@ featured:
   alt: 桥下立交结构的暗部透视
 
 categories:
-  - id: city
+  - id: landscape
     name: 风光摄影
     summary: 这一组只留下真正偏自然景观的画面，让视线先落在水线、礁石和空气感上，而不是建筑与结构。
     images:
-      - url: /assets/img/gallery/7.webp
+      - url: /assets/img/gallery/portfolio/landscape/reef-waves.webp
         alt: 海边岩石与水面
       - url: /assets/img/gallery/4.webp
         alt: 林间木质结构装置
@@ -68,15 +68,15 @@ categories:
     images:
       - url: /assets/img/gallery/8.webp
         alt: 桥下立交结构的暗部透视
-      - url: /assets/img/gallery/portfolio/city/arcade-perspective.webp
+      - url: /assets/img/gallery/portfolio/humanity/arcade-perspective.webp
         alt: 建筑拱廊内部的透视光影
-      - url: /assets/img/gallery/portfolio/city/stairwell-structure.webp
+      - url: /assets/img/gallery/portfolio/humanity/stairwell-structure.webp
         alt: 混凝土楼梯的几何结构
-      - url: /assets/img/gallery/portfolio/city/overhead-concrete.webp
+      - url: /assets/img/gallery/portfolio/humanity/overhead-concrete.webp
         alt: 仰拍建筑与天光交界
-      - url: /assets/img/gallery/portfolio/city/shadowed-geometry.webp
+      - url: /assets/img/gallery/portfolio/humanity/shadowed-geometry.webp
         alt: 阴影中的建筑切面
-      - url: /assets/img/gallery/portfolio/city/tower-courtyard.webp
+      - url: /assets/img/gallery/portfolio/humanity/tower-courtyard.webp
         alt: 高楼与近景空间形成夹角透视
       - url: /assets/img/gallery/portfolio/humanity/rocket-installation.webp
         alt: 户外展陈中的火箭装置
