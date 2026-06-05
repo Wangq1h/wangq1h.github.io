@@ -2,7 +2,7 @@ meta:
   eyebrow: Nikon Photography
   title: 流光岁月，似水年华
   description: 世界的形貌，时代的谱图，在曝光瞬间扫描与定格。
-  suggestion: 旧作已经并回四个主题里。现在每一组都改成居中的横向画廊，方便顺着节奏慢慢拖看前后几张。
+  suggestion: 新作已经按四个主题归位。每一组都采用居中的横向画廊，方便顺着节奏慢慢拖看前后几张。
 
 featured:
   url: /assets/img/gallery/8.webp
@@ -11,8 +11,28 @@ featured:
 categories:
   - id: landscape
     name: 风光摄影
-    summary: 这一组只留下真正偏自然景观的画面，让视线先落在水线、礁石和空气感上，而不是建筑与结构。
+    summary: 月色、海面、山壁与云层被收在同一条视线上，让自然光线和空气感带着画面缓慢展开。
     images:
+      - url: /assets/img/gallery/portfolio/landscape/moon-over-sea.webp
+        alt: 月亮悬在深蓝色海面上方
+      - url: /assets/img/gallery/portfolio/landscape/wind-farm-shore.webp
+        alt: 海岸远处排列着风力发电机
+      - url: /assets/img/gallery/portfolio/landscape/sunset-clouds.webp
+        alt: 橙色晚霞映在云层上
+      - url: /assets/img/gallery/portfolio/landscape/full-moon.webp
+        alt: 黑色背景中的满月特写
+      - url: /assets/img/gallery/portfolio/landscape/rock-waterfall.webp
+        alt: 山石之间流下的瀑布
+      - url: /assets/img/gallery/portfolio/landscape/sunlit-cliff.webp
+        alt: 阳光下的岩壁与蓝天
+      - url: /assets/img/gallery/portfolio/landscape/mountain-lanterns.webp
+        alt: 红灯笼近景与远处青山
+      - url: /assets/img/gallery/portfolio/landscape/mountain-cliffs.webp
+        alt: 绿意覆盖的山崖与远山
+      - url: /assets/img/gallery/portfolio/landscape/bamboo-sunbeam.webp
+        alt: 穿过竹林的一束阳光
+      - url: /assets/img/gallery/portfolio/landscape/cloud-rainbow.webp
+        alt: 云层间浮现的环形彩虹
       - url: /assets/img/gallery/portfolio/landscape/reef-waves.webp
         alt: 海边岩石与水面
       - url: /assets/img/gallery/4.webp
@@ -20,8 +40,16 @@ categories:
 
   - id: ecology
     name: 生态摄影
-    summary: 花枝、花瓣和猫的姿态被收在同一组里，让这一段更柔软，也更像从生活里慢慢捞出来的细小呼吸。
+    summary: 花枝、叶面、甲虫和猫的姿态被收在同一组里，让这一段更像从生活里慢慢捞出来的细小呼吸。
     images:
+      - url: /assets/img/gallery/portfolio/ecology/glossy-leaves.webp
+        alt: 黑色背景中被阳光照亮的绿叶
+      - url: /assets/img/gallery/portfolio/ecology/red-berries-on-rail.webp
+        alt: 栏杆旁生长的红色果实
+      - url: /assets/img/gallery/portfolio/ecology/blue-beetle-on-grass.webp
+        alt: 停在草叶上的蓝色甲虫
+      - url: /assets/img/gallery/portfolio/ecology/blue-beetle-on-stem.webp
+        alt: 停在细茎上的蓝色甲虫
       - url: /assets/img/gallery/portfolio/ecology/crimson-rose.webp
         alt: 深红色月季特写
       - url: /assets/img/gallery/portfolio/ecology/cream-rose.webp
@@ -43,8 +71,44 @@ categories:
 
   - id: birding
     name: 观鸟记录
-    summary: 这一组专门留给停驻、掠水和群飞的瞬间，让画面在横向移动时更像一条不断延长的飞行轨迹。
+    summary: 从白鹭掠过水面到乌鸫在林地觅食，这一组留下停驻、振翅与彼此呼应的瞬间。
     images:
+      - url: /assets/img/gallery/portfolio/birding/blackbird-with-worm.webp
+        alt: 草地上叼着虫子的乌鸫
+      - url: /assets/img/gallery/portfolio/birding/egret-in-flight.webp
+        alt: 白鹭从水面上方飞过
+      - url: /assets/img/gallery/portfolio/birding/sparrow-closeup.webp
+        alt: 从墙沿后探头的麻雀
+      - url: /assets/img/gallery/portfolio/birding/bird-landing.webp
+        alt: 小鸟张开翅膀落向枝头
+      - url: /assets/img/gallery/portfolio/birding/bird-in-foliage.webp
+        alt: 藏在浓密绿叶间的小鸟
+      - url: /assets/img/gallery/portfolio/birding/blackbird-in-treetop.webp
+        alt: 站在树冠顶部鸣叫的乌鸫
+      - url: /assets/img/gallery/portfolio/birding/birds-between-trees.webp
+        alt: 两只小鸟在树干之间振翅
+      - url: /assets/img/gallery/portfolio/birding/birds-around-tree.webp
+        alt: 两只小鸟环绕树干飞行
+      - url: /assets/img/gallery/portfolio/birding/blackbird-on-fence.webp
+        alt: 停在围栏立柱上的乌鸫
+      - url: /assets/img/gallery/portfolio/birding/blackbird-in-clearing.webp
+        alt: 林间空地上的乌鸫
+      - url: /assets/img/gallery/portfolio/birding/juvenile-blackbird-in-grass.webp
+        alt: 阳光下草地上的幼年乌鸫
+      - url: /assets/img/gallery/portfolio/birding/juvenile-blackbird-in-sun.webp
+        alt: 站在草地光斑中的幼年乌鸫
+      - url: /assets/img/gallery/portfolio/birding/juvenile-blackbird-sunlit.webp
+        alt: 侧身站在阳光下的幼年乌鸫
+      - url: /assets/img/gallery/portfolio/birding/juvenile-blackbird-profile.webp
+        alt: 草地上幼年乌鸫的侧面
+      - url: /assets/img/gallery/portfolio/birding/juvenile-blackbird-side-profile.webp
+        alt: 绿草背景中的幼年乌鸫侧影
+      - url: /assets/img/gallery/portfolio/birding/juvenile-blackbird-closeup.webp
+        alt: 草地上幼年乌鸫的近景
+      - url: /assets/img/gallery/portfolio/birding/juvenile-blackbird-standing.webp
+        alt: 直立在草地上的幼年乌鸫
+      - url: /assets/img/gallery/portfolio/birding/juvenile-blackbird-bamboo.webp
+        alt: 竹林边停驻的幼年乌鸫
       - url: /assets/img/gallery/portfolio/birding/owl-on-branch.webp
         alt: 停在树枝上的鸟类特写
       - url: /assets/img/gallery/portfolio/birding/blackbird-on-branch.webp
@@ -64,8 +128,12 @@ categories:
 
   - id: humanity
     name: 人文摄影
-    summary: 建筑、公共装置、雕塑和日常陈设都回到这一组里，更强调人造空间、生活痕迹和观察者与场景之间的关系。
+    summary: 建筑、基础设施、骑行与日常陈设都回到这一组里，更强调人造空间、生活痕迹和观察者与场景之间的关系。
     images:
+      - url: /assets/img/gallery/portfolio/humanity/bike-by-water.webp
+        alt: 水岸边停放的自行车
+      - url: /assets/img/gallery/portfolio/humanity/wind-turbine-bridge.webp
+        alt: 风力发电机与中式廊桥
       - url: /assets/img/gallery/8.webp
         alt: 桥下立交结构的暗部透视
       - url: /assets/img/gallery/portfolio/humanity/arcade-perspective.webp
